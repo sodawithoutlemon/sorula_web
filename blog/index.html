@@ -99,6 +99,51 @@
                 </p>
 
                 <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6 text-left">
+                    <!-- Yeni Blog LGS -->
+                    <article class="fade-up app-card flex flex-col h-full cursor-pointer"
+                        onclick="window.location.href='/blog/lgs-deneme-sinavlari-ne-zaman.html'">
+                        <div class="h-20 bg-emerald-50 rounded-t-[18.5px] p-6 flex items-center">
+                            <span class="bg-white px-3 py-1 rounded-full text-xs font-bold text-emerald-600">Sınav Taktikleri</span>
+                        </div>
+                        <div class="p-6 flex-1 flex flex-col">
+                            <h2 class="text-xl font-bold mb-3 text-gray-900 line-clamp-2">LGS Deneme Sınavları Ne Zaman Çözülmeye Başlanmalı?</h2>
+                            <p class="text-gray-500 text-sm mb-6 line-clamp-3 leading-relaxed">LGS hazırlığında deneme sınavlarına ne zaman başlanmalı? Hangi sıklıkla deneme çözülmeli? İşte deneme sınavı stratejileri.</p>
+                            <div class="mt-auto flex items-center justify-between text-sm text-gray-400 font-medium">
+                                <span>4 dk okuma</span>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Yeni Blog Pomodoro -->
+                    <article class="fade-up app-card flex flex-col h-full cursor-pointer"
+                        onclick="window.location.href='/blog/sinav-motivasyonu-pomodoro.html'">
+                        <div class="h-20 bg-orange-50 rounded-t-[18.5px] p-6 flex items-center">
+                            <span class="bg-white px-3 py-1 rounded-full text-xs font-bold text-orange-600">Rehberlik & Psikoloji</span>
+                        </div>
+                        <div class="p-6 flex-1 flex flex-col">
+                            <h2 class="text-xl font-bold mb-3 text-gray-900 line-clamp-2">Sınav Motivasyonunu Korumak: Pomodoro Tekniği</h2>
+                            <p class="text-gray-500 text-sm mb-6 line-clamp-3 leading-relaxed">Saatlerce masa başında oturmak her zaman verimli değildir. Pomodoro tekniği ile çalışma motivasyonunuzu nasıl artırabilirsiniz?</p>
+                            <div class="mt-auto flex items-center justify-between text-sm text-gray-400 font-medium">
+                                <span>5 dk okuma</span>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Yeni Blog YKS Program -->
+                    <article class="fade-up app-card flex flex-col h-full cursor-pointer"
+                        onclick="window.location.href='/blog/yks-calisma-programi-hazirlama.html'">
+                        <div class="h-20 bg-brand-50 rounded-t-[18.5px] p-6 flex items-center">
+                            <span class="bg-white px-3 py-1 rounded-full text-xs font-bold text-brand-600">Rehber</span>
+                        </div>
+                        <div class="p-6 flex-1 flex flex-col">
+                            <h2 class="text-xl font-bold mb-3 text-gray-900 line-clamp-2">YKS 2025: Evde Kendi Çalışma Programınızı Nasıl Hazırlarsınız?</h2>
+                            <p class="text-gray-500 text-sm mb-6 line-clamp-3 leading-relaxed">Dershaneye gitmeden evde kendi çalışma programınızı nasıl hazırlarsınız? Başarı getiren haftalık planlama teknikleri.</p>
+                            <div class="mt-auto flex items-center justify-between text-sm text-gray-400 font-medium">
+                                <span>6 dk okuma</span>
+                            </div>
+                        </div>
+                    </article>
+
                     <!-- Yeni Blog 1 -->
                     <article class="fade-up app-card flex flex-col h-full cursor-pointer"
                         onclick="window.location.href='/blog/2025-yks-konulari-neler.html'">
@@ -458,6 +503,14 @@
             entries.forEach(entry => { if (entry.isIntersecting) { entry.target.classList.add('visible'); observer.unobserve(entry.target); } });
         }, { rootMargin: '0px 0px -50px 0px', threshold: 0.1 });
         document.querySelectorAll('.fade-up').forEach(el => observer.observe(el));
+
+        document.querySelectorAll('article[onclick]').forEach(card => {
+            card.setAttribute('role', 'link');
+            card.setAttribute('tabindex', '0');
+            card.addEventListener('keydown', (e) => {
+                if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); card.click(); }
+            });
+        });
     </script>
 </body>
 

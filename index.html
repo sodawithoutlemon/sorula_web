@@ -61,6 +61,20 @@
   }
   </script>
 
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    "name": "Sorula",
+    "url": "https://sorula.app/",
+    "potentialAction": {
+      "@type": "SearchAction",
+      "target": "https://sorula.app/arama?q={search_term_string}",
+      "query-input": "required name=search_term_string"
+    }
+  }
+  </script>
+
   <script>function loadScript(a) { var b = document.getElementsByTagName("head")[0], c = document.createElement("script"); c.type = "text/javascript", c.src = "https://tracker.metricool.com/resources/be.js", c.onreadystatechange = a, c.onload = a, b.appendChild(c) } loadScript(function () { beTracker.t({ hash: "5bd0a1704758bd25e0a2e94505760927" }) });</script>
 
   <!-- JSON-LD: SoftwareApplication -->
@@ -164,9 +178,10 @@
               Zeka</a>
             <div class="relative group">
               <button
-                class="text-sm text-gray-500 hover:text-gray-900 transition-colors font-medium flex items-center gap-1">
+                class="text-sm text-gray-500 hover:text-gray-900 transition-colors font-medium flex items-center gap-1"
+                aria-haspopup="true" aria-expanded="false" aria-label="Sınavlar menüsünü aç">
                 Sınavlar
-                <svg class="w-3.5 h-3.5 opacity-70" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <svg class="w-3.5 h-3.5 opacity-70" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
                   <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M19 9l-7 7-7-7" />
                 </svg>
               </button>
@@ -192,9 +207,10 @@
           <!-- Download Button with Dropdown -->
           <div class="hidden md:flex items-center gap-3 relative">
             <button id="downloadBtn"
-              class="text-sm font-semibold text-white bg-gray-900 hover:bg-black px-6 py-2.5 rounded-full transition-all flex items-center gap-2">
+              class="text-sm font-semibold text-white bg-gray-900 hover:bg-black px-6 py-2.5 rounded-full transition-all flex items-center gap-2"
+              aria-haspopup="true" aria-expanded="false" aria-label="Uygulamayı indir seçeneklerini aç">
               İndir
-              <svg class="w-3.5 h-3.5 opacity-70" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <svg class="w-3.5 h-3.5 opacity-70" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M19 9l-7 7-7-7" />
               </svg>
             </button>
@@ -231,11 +247,11 @@
           <!-- Mobile Menu Button -->
           <button id="menuBtn"
             class="md:hidden flex items-center justify-center w-10 h-10 rounded-lg text-gray-600 hover:text-gray-900 transition-colors"
-            aria-label="Menü">
-            <svg id="menuOpen" class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            aria-label="Mobil menüyü aç/kapat" aria-expanded="false" aria-controls="mobileMenu">
+            <svg id="menuOpen" class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M4 6h16M4 12h16M4 18h16" />
             </svg>
-            <svg id="menuClose" class="w-6 h-6 hidden" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <svg id="menuClose" class="w-6 h-6 hidden" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M6 18L18 6M6 6l12 12" />
             </svg>
           </button>
@@ -1014,10 +1030,8 @@
       </div>
     </section>
 
-  </main>
-
-  <!-- ========== SIKÇA SORULAN SORULAR ========== -->
-  <section id="sss" class="relative py-20 lg:py-28 bg-gray-50 border-t border-gray-100">
+    <!-- ========== SIKÇA SORULAN SORULAR ========== -->
+    <section id="sss" class="relative py-20 lg:py-28 bg-gray-50 border-t border-gray-100">
     <div class="max-w-4xl mx-auto px-6 lg:px-8">
       <div class="text-center mb-12">
         <h2 class="text-3xl font-extrabold tracking-tight text-gray-900 mb-4">Sıkça Sorulan Sorular</h2>
@@ -1052,7 +1066,9 @@
         </div>
       </div>
     </div>
-  </section>
+    </section>
+
+  </main>
 
   <!-- ========== FOOTER ========== -->
   <footer id="iletisim" class="bg-white border-t border-gray-100">
@@ -1212,12 +1228,14 @@
 
     downloadBtn.addEventListener('click', (e) => {
       e.stopPropagation();
-      downloadDropdown.classList.toggle('hidden');
+      const isHidden = downloadDropdown.classList.toggle('hidden');
+      downloadBtn.setAttribute('aria-expanded', !isHidden);
     });
 
     document.addEventListener('click', (e) => {
       if (!downloadDropdown.contains(e.target) && e.target !== downloadBtn) {
         downloadDropdown.classList.add('hidden');
+        downloadBtn.setAttribute('aria-expanded', 'false');
       }
     });
 
@@ -1228,9 +1246,10 @@
     const menuClose = document.getElementById('menuClose');
 
     menuBtn.addEventListener('click', () => {
-      mobileMenu.classList.toggle('hidden');
+      const isHidden = mobileMenu.classList.toggle('hidden');
       menuOpen.classList.toggle('hidden');
       menuClose.classList.toggle('hidden');
+      menuBtn.setAttribute('aria-expanded', !isHidden);
     });
 
     mobileMenu.querySelectorAll('a').forEach(link => {
