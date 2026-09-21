@@ -8,7 +8,13 @@ module.exports = {
     "./kpss/**/*.html",
     "./blog/**/*.html",
     "./android/**/*.html",
-    "./ios/**/*.html"
+    "./ios/**/*.html",
+    // ⚡2026-09-21: `ayt` klasörü listede HİÇ YOKTU — o sayfanın sınıfları
+    // purge ediliyordu. Yasal sayfalar da eklendi.
+    "./ayt/**/*.html",
+    "./privacy/**/*.html",
+    "./terms/**/*.html",
+    "./delete-account/**/*.html"
   ],
   theme: {
     extend: {
