@@ -27,9 +27,10 @@
                         <img src="/logo.png" alt="Sorula" class="w-9 h-9" />
                         <span class="text-xl font-bold tracking-tight">Sorula</span>
                     </a>
-                    <div class="flex items-center gap-6 text-sm font-medium">
+                    <div class="flex items-center gap-5 text-sm font-medium">
                         <a href="/privacy/" class="text-gray-500 hover:text-gray-900">Gizlilik</a>
                         <a href="/terms/" class="text-gray-500 hover:text-gray-900">Şartlar</a>
+                        <a href="/destek/" class="text-gray-500 hover:text-gray-900">Destek</a>
                     </div>
                 </div>
             </div>
@@ -88,13 +89,15 @@
 
         <h2 class="mt-12 text-xl font-semibold">Hangi veriler silinir?</h2>
         <ul class="mt-3 list-disc pl-6 text-gray-700 space-y-1">
-            <li>Hesap bilgileriniz (e-posta, ad, kullanıcı adı, avatar)</li>
-            <li>Çözüm geçmişiniz, test sonuçlarınız, net ve sıralama kayıtlarınız</li>
-            <li>Notlarınız, çizimleriniz, hata defteriniz, kaydettiğiniz testler</li>
+            <li>Hesabınız ve profiliniz (e-posta, ad, kullanıcı adı, avatar)</li>
+            <li>Tüm çalışma verileriniz: testler, sonuçlar, notlar, yapılacaklar, hata defteri, kaydettiğiniz testler</li>
+            <li>Demografik bilgileriniz (il, sınıf, okul türü, okul adı, dershane, hedef üniversite/bölüm)</li>
+            <li>Arkadaş listeniz ve davetler</li>
+            <li>Yapay zekâ istek kayıtlarınız ve asistan sohbetleriniz</li>
             <li>Yüklediğiniz soru fotoğrafları ve PDF dosyaları</li>
-            <li>Yapay zeka asistanı sohbet geçmişiniz</li>
-            <li>Verdiğiniz demografik bilgiler (sınav türü, sınıf, il, okul türü)</li>
-            <li>Arkadaş listeniz ve oda kayıtlarınız</li>
+            <li>Gönderdiğiniz geri bildirimler</li>
+            <li>Lig ve haftalık sınav katılımlarınız</li>
+            <li>Oluşturduğunuz odalar</li>
         </ul>
 
         <h2 class="mt-12 text-xl font-semibold">Ne kadar sürer?</h2>
@@ -103,11 +106,17 @@
             E-posta ile gelen talepler <strong>en geç 30 gün</strong> içinde tamamlanır.
         </p>
 
-        <h2 class="mt-12 text-xl font-semibold">Saklanabilecek veriler</h2>
-        <p class="mt-2 text-gray-700">
-            Yasal saklama yükümlülüğü bulunan kayıtlar (örneğin satın alma ve fatura kayıtları) ilgili
-            mevzuatın öngördüğü süre boyunca saklanır. Bu kayıtlar kimliğinizle ilişkilendirilmeden tutulur.
-        </p>
+        <h2 class="mt-12 text-xl font-semibold">Bir süre daha saklanabilecek veriler</h2>
+        <p class="mt-2 text-gray-700">Aşağıdaki kayıtlar bizim veya hizmet sağlayıcılarımızın sistemlerinde bir süre
+            daha kalabilir:</p>
+        <ul class="mt-3 list-disc pl-6 text-gray-700 space-y-1">
+            <li>Google Analytics'teki takma adlı (pseudonymous) kullanım verileri — Google Analytics'teki saklama
+                süresi dolana kadar</li>
+            <li>Firebase Crashlytics çökme kayıtları — yaklaşık 90 gün</li>
+            <li>RevenueCat, App Store ve Google Play'deki satın alma kayıtları — yasal ve mali yükümlülükler nedeniyle</li>
+            <li>OpenAI'nin kötüye kullanımı izlemek için kendi politikası gereği tutabildiği API kayıtları — en fazla
+                30 gün</li>
+        </ul>
 
         <div class="mt-10 rounded-xl border border-gray-200 bg-gray-50 p-5">
             <h3 class="font-semibold">⚠ Aboneliğiniz varsa</h3>
@@ -117,7 +126,7 @@
             </p>
             <ul class="mt-2 list-disc pl-6 text-gray-700 text-sm space-y-1">
                 <li><strong>Android:</strong> Play Store → Profil → Ödemeler ve abonelikler → Abonelikler</li>
-                <li><strong>iOS:</strong> Ayarlar → Apple Kimliği → Abonelikler</li>
+                <li><strong>iOS:</strong> Ayarlar → [adınız] → Abonelikler</li>
             </ul>
         </div>
 
@@ -133,14 +142,19 @@
     </main>
 
     <footer class="border-t border-gray-100">
-        <div class="max-w-3xl mx-auto px-6 py-8 flex flex-wrap items-center justify-between gap-4 text-sm text-gray-500">
-            <span>© 2026 A&amp;Y Creations</span>
-            <div class="flex gap-6">
-                <a href="/" class="hover:text-gray-900">Ana Sayfa</a>
-                <a href="/privacy/" class="hover:text-gray-900">Gizlilik</a>
-                <a href="/terms/" class="hover:text-gray-900">Şartlar</a>
-                <a href="/delete-account/" class="hover:text-gray-900">Hesap Silme</a>
+        <div class="max-w-3xl mx-auto px-6 py-8 text-sm text-gray-500">
+            <div class="flex flex-wrap items-center justify-between gap-4">
+                <span>© 2026 A&amp;Y Creations</span>
+                <nav aria-label="Yasal bağlantılar" class="flex flex-wrap gap-x-5 gap-y-2">
+                    <a href="/" class="hover:text-gray-900">Ana Sayfa</a>
+                    <a href="/privacy/" class="hover:text-gray-900">Gizlilik</a>
+                    <a href="/terms/" class="hover:text-gray-900">Kullanım Şartları</a>
+                    <a href="/kvkk/" class="hover:text-gray-900">KVKK</a>
+                    <a href="/destek/" class="hover:text-gray-900">Destek</a>
+                    <a href="/delete-account/" class="hover:text-gray-900">Hesap Silme</a>
+                </nav>
             </div>
+            <p class="mt-4 text-xs text-gray-400">Sorula; ÖSYM, MEB veya YÖK ile bağlantılı değildir.</p>
         </div>
     </footer>
 

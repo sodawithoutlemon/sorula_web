@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Gizlilik Politikası — Sorula</title>
     <link rel="stylesheet" href="/output.css" />
-    <meta name="description" content="Sorula gizlilik politikası: hangi verileri topluyoruz, neden topluyoruz, kimlerle paylaşıyoruz ve verilerinizi nasıl silebilirsiniz." />
+    <meta name="description" content="Sorula gizlilik politikası: hangi verileri neden işlediğimiz, kimlerle paylaştığımız, reklam ve yapay zekâ ayarları, çocuk modu, saklama süreleri, KVKK haklarınız ve verilerinizi nasıl silebileceğiniz." />
     <meta name="robots" content="index, follow" />
     <link rel="canonical" href="https://sorula.app/privacy/" />
     <meta property="og:title" content="Gizlilik Politikası — Sorula" />
@@ -27,9 +27,10 @@
                         <img src="/logo.png" alt="Sorula" class="w-9 h-9" />
                         <span class="text-xl font-bold tracking-tight">Sorula</span>
                     </a>
-                    <div class="flex items-center gap-6 text-sm font-medium">
-                        <a href="/privacy/" class="text-gray-900">Gizlilik</a>
+                    <div class="flex items-center gap-5 text-sm font-medium">
+                        <a href="/privacy/" class="text-gray-900" aria-current="page">Gizlilik</a>
                         <a href="/terms/" class="text-gray-500 hover:text-gray-900">Şartlar</a>
+                        <a href="/destek/" class="text-gray-500 hover:text-gray-900">Destek</a>
                     </div>
                 </div>
             </div>
@@ -39,190 +40,522 @@
     <main class="max-w-3xl mx-auto px-6 pt-28 pb-24">
 
         <h1 class="text-3xl sm:text-4xl font-bold tracking-tight">Gizlilik Politikası</h1>
-        <p class="mt-3 text-sm text-gray-500">Son güncelleme: 21 Eylül 2026</p>
+        <p class="mt-3 text-sm text-gray-500">Son güncelleme: 2 Ekim 2026</p>
 
         <div class="mt-6 rounded-xl border border-gray-200 bg-gray-50 p-5 text-sm text-gray-700">
-            Sorula, <strong>A&amp;Y Creations</strong> tarafından geliştirilen bir sınav hazırlık uygulamasıdır.
-            Bu sayfa hangi verileri topladığımızı, neden topladığımızı, kimlerle paylaştığımızı ve
-            verilerinizi nasıl silebileceğinizi açıklar.
-            Kullanım koşulları için <a href="/terms/" class="underline">Kullanım Şartları</a> sayfasına bakın.
+            Bu politika, Sorula mobil uygulamasında (iOS ve Android) ve sorula.app web sitesinde kişisel
+            verilerinizi nasıl işlediğimizi açıklar. Kısa KVKK bilgilendirmesi için
+            <a href="/kvkk/" class="underline">KVKK Aydınlatma Metni</a>, kullanım koşulları için
+            <a href="/terms/" class="underline">Kullanım Şartları</a> sayfasına bakabilirsiniz.
+            <p class="mt-3">"5.0.6 ve sonraki sürümler" notu taşıyan davranışlar uygulamanın 5.0.6 sürümüyle gelir; daha
+                eski sürümlerdeki durum ilgili bölümde ayrıca belirtilir. Uygulamayı güncel tutmanızı öneririz.</p>
         </div>
 
-        <h2 class="mt-12 text-xl font-semibold">1. Topladığımız Bilgiler</h2>
+        <nav aria-label="İçindekiler" class="mt-8">
+            <h2 class="text-sm font-semibold text-gray-900">İçindekiler</h2>
+            <ol class="mt-3 list-decimal pl-6 text-sm text-gray-600 space-y-1">
+                <li><a href="#veri-sorumlusu" class="hover:text-gray-900 underline">Biz kimiz</a></li>
+                <li><a href="#veriler" class="hover:text-gray-900 underline">Hangi verileri topluyoruz</a></li>
+                <li><a href="#amaclar" class="hover:text-gray-900 underline">Amaçlar ve hukuki sebepler</a></li>
+                <li><a href="#paylasim" class="hover:text-gray-900 underline">Paylaşım ve yurt dışına aktarım</a></li>
+                <li><a href="#reklam" class="hover:text-gray-900 underline">Reklam, izleme ve tercihleriniz</a></li>
+                <li><a href="#yapay-zeka" class="hover:text-gray-900 underline">Yapay zekâ özellikleri</a></li>
+                <li><a href="#cocuklar" class="hover:text-gray-900 underline">Çocuklar ve gençler</a></li>
+                <li><a href="#saklama" class="hover:text-gray-900 underline">Saklama süreleri</a></li>
+                <li><a href="#silme" class="hover:text-gray-900 underline">Hesap ve veri silme</a></li>
+                <li><a href="#haklar" class="hover:text-gray-900 underline">Haklarınız ve başvuru</a></li>
+                <li><a href="#cerezler" class="hover:text-gray-900 underline">Web sitesi ve çerezler</a></li>
+                <li><a href="#guvenlik" class="hover:text-gray-900 underline">Güvenlik</a></li>
+                <li><a href="#degisiklikler" class="hover:text-gray-900 underline">Değişiklikler</a></li>
+                <li><a href="#iletisim" class="hover:text-gray-900 underline">İletişim</a></li>
+            </ol>
+        </nav>
 
-        <h3 class="mt-6 font-semibold">1.1 Hesap bilgileri</h3>
-        <p class="mt-2 text-gray-700">Google veya Apple ile giriş yaptığınızda:</p>
-        <ul class="mt-2 list-disc pl-6 text-gray-700 space-y-1">
-            <li>E-posta adresiniz</li>
-            <li>Adınız (sağlanmışsa)</li>
-            <li>Uygulama içinde belirlediğiniz kullanıcı adı ve avatar</li>
-        </ul>
+        <!-- 1 -->
+        <h2 id="veri-sorumlusu" class="mt-12 text-xl font-semibold scroll-mt-24">1. Biz kimiz</h2>
+        <p class="mt-2 text-gray-700">
+            Sorula, <strong>Yiğit Özdemir</strong> tarafından <strong>"A&amp;Y Creations"</strong> adıyla
+            geliştirilen ve yayımlanan bir sınav hazırlık uygulamasıdır. 6698 sayılı Kişisel Verilerin Korunması
+            Kanunu ("KVKK") bakımından <strong>veri sorumlusu</strong>, gerçek kişi olarak Yiğit Özdemir'dir.
+        </p>
+        <p class="mt-3 text-gray-700">
+            Gizlilikle ilgili tüm talepleriniz için:
+            <a href="mailto:info@sorula.app" class="underline font-medium">info@sorula.app</a>
+        </p>
 
-        <h3 class="mt-6 font-semibold">1.2 Sizin girdiğiniz bilgiler</h3>
-        <p class="mt-2 text-gray-700">Uygulama deneyimini kişiselleştirmek için sizden istediğimiz, vermesi
-            <strong>isteğe bağlı</strong> bilgiler:</p>
-        <ul class="mt-2 list-disc pl-6 text-gray-700 space-y-1">
-            <li>Hazırlandığınız sınav türü ve hedef tarihiniz</li>
-            <li>Okul türü ve sınıf düzeyi</li>
-            <li>Yaşadığınız il</li>
-            <li>Dershaneye gidip gitmediğiniz</li>
-            <li>Hedef üniversite tercihiniz</li>
-        </ul>
-
-        <h3 class="mt-6 font-semibold">1.3 Yüklediğiniz içerik</h3>
-        <ul class="mt-2 list-disc pl-6 text-gray-700 space-y-1">
-            <li><strong>Soru fotoğrafları</strong> — kamerayla çektiğiniz veya galeriden seçtiğiniz görseller</li>
-            <li><strong>PDF dosyaları</strong> — test üretmek için yüklediğiniz belgeler</li>
-            <li>Notlarınız, çizimleriniz, yapay zeka asistanına yazdığınız mesajlar</li>
-            <li>Oda adları ve geri bildirim mesajlarınız</li>
-        </ul>
-
-        <h3 class="mt-6 font-semibold">1.4 Otomatik toplanan bilgiler</h3>
-        <ul class="mt-2 list-disc pl-6 text-gray-700 space-y-1">
-            <li>Uygulama kullanım davranışı (hangi özellikleri kullandığınız, çözdüğünüz test sayısı, ekran süresi)</li>
-            <li>Çözüm geçmişiniz, doğru/yanlış sayılarınız, sınav sonuçlarınız</li>
-            <li>Cihaz bilgisi ve tanılama verileri</li>
-            <li>Çökme kayıtları</li>
-            <li><strong>Reklam kimliği</strong> ve IP adresinizden türetilen <strong>yaklaşık konum</strong>
-                (yalnızca reklam gösterimi için — bkz. bölüm 3)</li>
-            <li>Bildirim gönderebilmek için cihaz bildirim jetonu</li>
-        </ul>
-
-        <h2 class="mt-12 text-xl font-semibold">2. Bilgileri Neden Kullanıyoruz</h2>
-        <ul class="mt-2 list-disc pl-6 text-gray-700 space-y-1">
-            <li>Hizmeti sunmak, hesabınızı ve aboneliğinizi yönetmek</li>
-            <li>Size uygun soru, test ve çalışma önerileri hazırlamak</li>
-            <li>Yapay zeka özelliklerini çalıştırmak (fotoğraftan soru çözme, test üretme, asistan)</li>
-            <li>Lig ve sıralama özelliklerini işletmek</li>
-            <li>Uygulama performansını ölçmek, hataları tespit etmek</li>
-            <li>Reklam göstermek (ücretsiz kullanıcılar için)</li>
-            <li>Destek taleplerinize yanıt vermek</li>
-        </ul>
-        <p class="mt-4 text-gray-700">Kişisel verilerinizi <strong>satmıyoruz.</strong></p>
-
-        <h2 class="mt-12 text-xl font-semibold">3. Üçüncü Taraf Hizmetler</h2>
-        <p class="mt-2 text-gray-700">Sorula'nın çalışabilmesi için aşağıdaki hizmetleri kullanıyoruz.
-            Her birinin kendi gizlilik politikası vardır:</p>
+        <!-- 2 -->
+        <h2 id="veriler" class="mt-12 text-xl font-semibold scroll-mt-24">2. Hangi verileri topluyoruz</h2>
+        <p class="mt-2 text-gray-700">
+            Sorula'ya Google, Apple ya da e-posta ve şifreyle giriş yapabilirsiniz; giriş işlemleri Google Firebase
+            Authentication ile yürütülür. Hesap açmadan, sınırlı özelliklerle misafir olarak da kullanabilirsiniz.
+            Aşağıdaki tablo hangi veriyi neden işlediğimizi ve verinin nereye gittiğini gösterir.
+        </p>
 
         <div class="mt-4 overflow-x-auto">
             <table class="w-full text-sm border border-gray-200 rounded-lg">
                 <thead class="bg-gray-50 text-left">
                     <tr>
-                        <th class="p-3 font-semibold border-b border-gray-200">Hizmet</th>
-                        <th class="p-3 font-semibold border-b border-gray-200">Ne için</th>
-                        <th class="p-3 font-semibold border-b border-gray-200">Aktarılan veri</th>
+                        <th scope="col" class="p-3 font-semibold border-b border-gray-200">Veri</th>
+                        <th scope="col" class="p-3 font-semibold border-b border-gray-200">Ne için</th>
+                        <th scope="col" class="p-3 font-semibold border-b border-gray-200">Nereye gider</th>
                     </tr>
                 </thead>
                 <tbody class="text-gray-700">
                     <tr class="border-b border-gray-100">
-                        <td class="p-3 align-top"><a class="underline" href="https://firebase.google.com/support/privacy" target="_blank" rel="noopener">Google Firebase</a></td>
-                        <td class="p-3 align-top">Kimlik doğrulama, veritabanı, dosya depolama, bildirim, çökme raporu, analiz</td>
-                        <td class="p-3 align-top">Hesap bilgileri, uygulama içeriği, kullanım verisi, çökme kayıtları</td>
+                        <td class="p-3 align-top">E-posta adresi</td>
+                        <td class="p-3 align-top">Hesabınızı oluşturmak ve giriş yapmanızı sağlamak</td>
+                        <td class="p-3 align-top">Google Firebase</td>
                     </tr>
                     <tr class="border-b border-gray-100">
-                        <td class="p-3 align-top"><a class="underline" href="https://policies.google.com/technologies/ads" target="_blank" rel="noopener">Google AdMob</a></td>
-                        <td class="p-3 align-top">Ücretsiz sürümde reklam gösterimi</td>
-                        <td class="p-3 align-top"><strong>Reklam kimliği, cihaz kimlikleri, IP tabanlı yaklaşık konum</strong></td>
+                        <td class="p-3 align-top">Ad, kullanıcı adı ve avatar</td>
+                        <td class="p-3 align-top">Profilinizi göstermek. Lig, odalar, arkadaş listesi ve davetlerde
+                            <strong>diğer kullanıcılara görünür.</strong></td>
+                        <td class="p-3 align-top">Google Firebase; diğer kullanıcılar</td>
                     </tr>
                     <tr class="border-b border-gray-100">
-                        <td class="p-3 align-top"><a class="underline" href="https://openai.com/policies/privacy-policy" target="_blank" rel="noopener">OpenAI</a></td>
-                        <td class="p-3 align-top">Yapay zeka özellikleri: fotoğraftan soru çözme, test ve kart üretimi, asistan</td>
-                        <td class="p-3 align-top"><strong>Yüklediğiniz fotoğraflar ve PDF'ler, asistana yazdığınız mesajlar</strong></td>
+                        <td class="p-3 align-top">Kullanıcı kimliği (uid)</td>
+                        <td class="p-3 align-top">Uygulamanın çalışması, analiz ve abonelik yönetimi</td>
+                        <td class="p-3 align-top">Google Analytics for Firebase, Firebase Crashlytics, RevenueCat</td>
+                    </tr>
+                    <tr class="border-b border-gray-100">
+                        <td class="p-3 align-top">Reklam kimliği (IDFA/AAID), IP adresinden çıkarılan yaklaşık konum,
+                            cihaz bilgileri</td>
+                        <td class="p-3 align-top">Reklam göstermek (bkz. <a href="#reklam" class="underline">bölüm 5</a>)</td>
+                        <td class="p-3 align-top">Google AdMob — <strong>reklam amacıyla paylaşılır</strong></td>
+                    </tr>
+                    <tr class="border-b border-gray-100">
+                        <td class="p-3 align-top">Bildirim jetonu (push token)</td>
+                        <td class="p-3 align-top">Size bildirim göndermek</td>
+                        <td class="p-3 align-top">Firebase Cloud Messaging</td>
+                    </tr>
+                    <tr class="border-b border-gray-100">
+                        <td class="p-3 align-top">İsteğe bağlı bilgiler: il, sınıf, okul türü, okul adı, dershane,
+                            hedef üniversite/bölüm</td>
+                        <td class="p-3 align-top">Deneyimi kişiselleştirmek ve istatistik</td>
+                        <td class="p-3 align-top">Google Firebase. İl, sınıf, okul türü ve dershane bilgisi Google
+                            Analytics'e kullanıcı özelliği olarak gönderilir; 5.0.6 ve sonraki sürümlerde 13 yaşından
+                            küçük kullanıcılar için gönderilmez.</td>
+                    </tr>
+                    <tr class="border-b border-gray-100">
+                        <td class="p-3 align-top">Soru fotoğrafları ve PDF dosyaları</td>
+                        <td class="p-3 align-top">Yapay zekâ ile soru çözmek ve test üretmek</td>
+                        <td class="p-3 align-top">Firebase Storage, OpenAI</td>
+                    </tr>
+                    <tr class="border-b border-gray-100">
+                        <td class="p-3 align-top">Oluşturduğunuz içerik: notlar, yapılacaklar, yapay zekâ asistanı
+                            mesajları, oda adları, geri bildirimler ve şikâyetler</td>
+                        <td class="p-3 align-top">İlgili özelliği sunmak</td>
+                        <td class="p-3 align-top">Google Firebase. Asistan mesajları ve seçtiğiniz not alıntıları
+                            OpenAI'ye de gönderilir.</td>
+                    </tr>
+                    <tr class="border-b border-gray-100">
+                        <td class="p-3 align-top">Çalışma bağlamı: test istatistikleri, zayıf ve güçlü konular, hedef
+                            sıralama/bölüm, seviye</td>
+                        <td class="p-3 align-top">Yapay zekâ önerileri</td>
+                        <td class="p-3 align-top">OpenAI</td>
+                    </tr>
+                    <tr class="border-b border-gray-100">
+                        <td class="p-3 align-top">Sınav sonuçları ve lig katılımı</td>
+                        <td class="p-3 align-top">Lig ve odaları işletmek. Lig ve odalarda <strong>diğer
+                            kullanıcılara görünür.</strong></td>
+                        <td class="p-3 align-top">Google Firebase; diğer kullanıcılar</td>
+                    </tr>
+                    <tr class="border-b border-gray-100">
+                        <td class="p-3 align-top">Uygulama kullanım olayları (ör. test başlatma/bitirme, odalar,
+                            abonelik ekranı, satın almalar)</td>
+                        <td class="p-3 align-top">Uygulamanın nasıl kullanıldığını ölçmek ve geliştirmek. Satın alma
+                            olayı Google Ads dönüşüm ölçümünde kullanılabilir.</td>
+                        <td class="p-3 align-top">Google Analytics for Firebase</td>
+                    </tr>
+                    <tr class="border-b border-gray-100">
+                        <td class="p-3 align-top">Satın alma geçmişi ve abonelik durumu</td>
+                        <td class="p-3 align-top">Aboneliğinizi yönetmek</td>
+                        <td class="p-3 align-top">App Store / Google Play, RevenueCat</td>
+                    </tr>
+                    <tr class="border-b border-gray-100">
+                        <td class="p-3 align-top">Arama geçmişi (üniversite tercih sihirbazı)</td>
+                        <td class="p-3 align-top">Tercih sihirbazını çalıştırmak</td>
+                        <td class="p-3 align-top">Google Firebase</td>
                     </tr>
                     <tr>
-                        <td class="p-3 align-top"><a class="underline" href="https://www.revenuecat.com/privacy" target="_blank" rel="noopener">RevenueCat</a></td>
-                        <td class="p-3 align-top">Abonelik durumunun yönetimi</td>
-                        <td class="p-3 align-top">Abonelik durumu, işlem kimlikleri</td>
+                        <td class="p-3 align-top">Çökme ve performans verileri</td>
+                        <td class="p-3 align-top">Hataları bulmak ve düzeltmek</td>
+                        <td class="p-3 align-top">Firebase Crashlytics</td>
                     </tr>
                 </tbody>
             </table>
         </div>
 
-        <p class="mt-4 text-gray-700">Ödemeler <strong>Google Play</strong> ve <strong>App Store</strong> üzerinden
-            işlenir. Kart bilgileriniz Sorula'ya hiçbir zaman ulaşmaz ve tarafımızca saklanmaz.</p>
-
-        <h2 class="mt-12 text-xl font-semibold">4. Reklamlar</h2>
-        <p class="mt-2 text-gray-700">
-            Sorula'nın ücretsiz sürümünde Google AdMob aracılığıyla reklam gösterilir. Reklamlar test bitiş
-            ekranında ve soru ekranında görünür; soru çözerken araya reklam girmez.
-        </p>
-        <p class="mt-3 text-gray-700">
-            Reklam gösterimi sırasında cihazınızın <strong>reklam kimliği</strong> kullanılır. Bu kimliği
-            cihaz ayarlarınızdan sıfırlayabilir veya kişiselleştirilmiş reklamları kapatabilirsiniz:
-        </p>
+        <h3 class="mt-8 font-semibold">Diğer kullanıcıların görebildikleri</h3>
         <ul class="mt-2 list-disc pl-6 text-gray-700 space-y-1">
-            <li><strong>Android:</strong> Ayarlar → Google → Reklamlar</li>
-            <li><strong>iOS:</strong> Ayarlar → Gizlilik ve Güvenlik → İzleme</li>
-        </ul>
-        <p class="mt-3 text-gray-700">Premium aboneliğe geçtiğinizde reklamlar tamamen kapanır.</p>
-
-        <h2 class="mt-12 text-xl font-semibold">5. Veri Güvenliği</h2>
-        <p class="mt-2 text-gray-700">
-            Verileriniz aktarım sırasında şifrelenir (TLS) ve Google Firebase altyapısında saklanır.
-            Yüklediğiniz dosyalara yalnızca sizin hesabınız erişebilir.
-            Buna rağmen hiçbir internet aktarımı veya elektronik saklama yöntemi %100 güvenli değildir.
-        </p>
-
-        <h2 class="mt-12 text-xl font-semibold">6. Verilerinizi Silme</h2>
-        <p class="mt-2 text-gray-700">Hesabınızı ve verilerinizi iki şekilde silebilirsiniz:</p>
-        <ul class="mt-2 list-disc pl-6 text-gray-700 space-y-1">
-            <li><strong>Uygulama içinden:</strong> Profil → Hesap Ayarları → Hesabı Sil</li>
-            <li><strong>Uygulamayı yüklemeden:</strong>
-                <a href="/delete-account/" class="underline">sorula.app/delete-account</a> sayfasından talep edin</li>
+            <li>Adınız veya kullanıcı adınız ve avatarınız: lig, odalar, arkadaş listesi ve davetlerde</li>
+            <li>Sınav sonuçlarınız ve lig katılımınız: lig ve odalarda</li>
         </ul>
         <p class="mt-3 text-gray-700">
-            Silme talebiniz üzerine hesabınız, çözüm geçmişiniz, notlarınız, yüklediğiniz dosyalar ve
-            demografik bilgileriniz kaldırılır. Yasal saklama yükümlülüğü bulunan kayıtlar
-            (örneğin fatura kayıtları) ilgili mevzuatın öngördüğü süre boyunca saklanır.
+            Google veya Apple ile açılan hesaplarda o hesaptaki adınız başlangıçta görünen ad olarak kullanılır;
+            uygulamanın 5.0.6 ve sonraki sürümlerinde ise yeni hesaplara varsayılan olarak bir takma ad verilir.
+            Görünen adınızı ve avatarınızı
+            <strong>Profil</strong> bölümünden değiştirebilirsiniz; gerçek adınızı kullanmak zorunda değilsiniz.
         </p>
 
-        <h2 class="mt-12 text-xl font-semibold">7. Çocukların Gizliliği</h2>
+        <h3 class="mt-8 font-semibold">Toplamadıklarımız</h3>
         <p class="mt-2 text-gray-700">
-            Sorula ortaokul ve lise düzeyindeki sınavlara hazırlık içeriği sunar; kullanıcılarımız arasında
-            <strong>18 yaşından küçük</strong> öğrenciler bulunur.
+            Kesin konumunuzu, rehberinizi (kişiler), mikrofon veya ses kaydınızı ve sağlık verilerinizi toplamıyoruz.
+            Ödemeler App Store veya Google Play üzerinden yapılır; kart bilgileriniz bize ulaşmaz.
+        </p>
+
+        <!-- 3 -->
+        <h2 id="amaclar" class="mt-12 text-xl font-semibold scroll-mt-24">3. Amaçlar ve hukuki sebepler</h2>
+        <p class="mt-2 text-gray-700">Verilerinizi aşağıdaki amaçlarla ve KVKK'daki şu hukuki sebeplere dayanarak
+            işleriz:</p>
+
+        <div class="mt-4 overflow-x-auto">
+            <table class="w-full text-sm border border-gray-200 rounded-lg">
+                <thead class="bg-gray-50 text-left">
+                    <tr>
+                        <th scope="col" class="p-3 font-semibold border-b border-gray-200">Amaç</th>
+                        <th scope="col" class="p-3 font-semibold border-b border-gray-200">Hukuki sebep</th>
+                    </tr>
+                </thead>
+                <tbody class="text-gray-700">
+                    <tr class="border-b border-gray-100">
+                        <td class="p-3 align-top">Hesabınızı oluşturmak ve yönetmek; testler, lig, odalar, notlar,
+                            yapay zekâ araçları ve abonelik gibi özellikleri sunmak; bildirim göndermek</td>
+                        <td class="p-3 align-top">Sözleşmenin kurulması veya ifası (KVKK m.5/2-c)</td>
+                    </tr>
+                    <tr class="border-b border-gray-100">
+                        <td class="p-3 align-top">Güvenliği sağlamak, kötüye kullanımı önlemek, hataları bulmak ve
+                            düzeltmek, uygulamanın nasıl kullanıldığını ölçmek</td>
+                        <td class="p-3 align-top">Meşru menfaat (KVKK m.5/2-f)</td>
+                    </tr>
+                    <tr class="border-b border-gray-100">
+                        <td class="p-3 align-top">Kişiselleştirilmiş reklam göstermek</td>
+                        <td class="p-3 align-top">Açık rıza (KVKK m.5/1)</td>
+                    </tr>
+                    <tr class="border-b border-gray-100">
+                        <td class="p-3 align-top">İsteğe bağlı demografik bilgileri işlemek</td>
+                        <td class="p-3 align-top">Açık rıza (KVKK m.5/1)</td>
+                    </tr>
+                    <tr>
+                        <td class="p-3 align-top">Verilerin yurt dışındaki hizmet sağlayıcılara aktarılması</td>
+                        <td class="p-3 align-top">Açık rıza veya mevzuatta öngörülen güvenceler (KVKK m.9)</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <p class="mt-4 text-gray-700">
+            Açık rızanızı dilediğiniz zaman geri alabilirsiniz: reklam iznini cihaz ayarlarınızdan kapatabilir
+            (bkz. <a href="#reklam" class="underline">bölüm 5</a>), isteğe bağlı bilgileri vermeyebilir ya da
+            silinmelerini <a href="mailto:info@sorula.app" class="underline">info@sorula.app</a> adresinden
+            isteyebilirsiniz. Rızanızı geri almanız, o zamana kadar yapılan işlemleri etkilemez.
+            Uygulamanın 5.0.6'dan eski sürümlerinde reklam kişiselleştirmesi için uygulama içinde ayrıca izin
+            istenmez; kişiselleştirme cihazınızın reklam ayarlarına bağlıdır (bkz. <a href="#reklam" class="underline">bölüm 5</a>).
+        </p>
+
+        <!-- 4 -->
+        <h2 id="paylasim" class="mt-12 text-xl font-semibold scroll-mt-24">4. Paylaşım ve yurt dışına aktarım</h2>
+        <p class="mt-2 text-gray-700">Verilerinizi yalnızca hizmeti sunmak için gereken ölçüde aşağıdaki hizmet
+            sağlayıcılarla paylaşırız. Her birinin kendi gizlilik politikası vardır:</p>
+
+        <div class="mt-4 overflow-x-auto">
+            <table class="w-full text-sm border border-gray-200 rounded-lg">
+                <thead class="bg-gray-50 text-left">
+                    <tr>
+                        <th scope="col" class="p-3 font-semibold border-b border-gray-200">Hizmet</th>
+                        <th scope="col" class="p-3 font-semibold border-b border-gray-200">Ne için</th>
+                        <th scope="col" class="p-3 font-semibold border-b border-gray-200">Hangi veriler</th>
+                    </tr>
+                </thead>
+                <tbody class="text-gray-700">
+                    <tr class="border-b border-gray-100">
+                        <td class="p-3 align-top"><a class="underline" href="https://firebase.google.com/support/privacy" target="_blank" rel="noopener">Google Firebase</a>
+                            (Authentication, Firestore, Storage, Cloud Messaging)</td>
+                        <td class="p-3 align-top">Giriş, veritabanı, dosya depolama, bildirim</td>
+                        <td class="p-3 align-top">Hesap bilgileri, uygulama içeriği, yüklediğiniz dosyalar, bildirim
+                            jetonu</td>
+                    </tr>
+                    <tr class="border-b border-gray-100">
+                        <td class="p-3 align-top"><a class="underline" href="https://policies.google.com/privacy" target="_blank" rel="noopener">Google Analytics for Firebase</a>
+                            ve Firebase Crashlytics</td>
+                        <td class="p-3 align-top">Kullanım analizi ve çökme raporları; satın alma olayının Google Ads
+                            dönüşüm ölçümü</td>
+                        <td class="p-3 align-top">Kullanıcı kimliği, kullanım olayları, bazı isteğe bağlı bilgiler
+                            (5.0.6 ve sonraki sürümlerde 13 yaş altı hariç), cihaz ve çökme verileri</td>
+                    </tr>
+                    <tr class="border-b border-gray-100">
+                        <td class="p-3 align-top"><a class="underline" href="https://policies.google.com/technologies/ads" target="_blank" rel="noopener">Google AdMob</a></td>
+                        <td class="p-3 align-top">Reklam gösterimi</td>
+                        <td class="p-3 align-top">Reklam kimliği, IP'den çıkarılan yaklaşık konum, cihaz bilgileri
+                            (reklam amacıyla paylaşılır)</td>
+                    </tr>
+                    <tr class="border-b border-gray-100">
+                        <td class="p-3 align-top"><a class="underline" href="https://openai.com/policies/privacy-policy" target="_blank" rel="noopener">OpenAI</a></td>
+                        <td class="p-3 align-top">Yapay zekâ özellikleri (veri işleyen)</td>
+                        <td class="p-3 align-top">Fotoğraflar, PDF'ler, asistan mesajları, seçtiğiniz not alıntıları,
+                            çalışma bağlamı. Ad, e-posta, kullanıcı kimliği ve il/okul bilgisi gönderilmez.</td>
+                    </tr>
+                    <tr class="border-b border-gray-100">
+                        <td class="p-3 align-top"><a class="underline" href="https://www.revenuecat.com/privacy" target="_blank" rel="noopener">RevenueCat</a></td>
+                        <td class="p-3 align-top">Abonelik durumunu yönetmek</td>
+                        <td class="p-3 align-top">Kullanıcı kimliği, satın alma ve abonelik bilgileri</td>
+                    </tr>
+                    <tr>
+                        <td class="p-3 align-top">Apple App Store, Google Play</td>
+                        <td class="p-3 align-top">Ödeme ve abonelik işlemleri</td>
+                        <td class="p-3 align-top">Satın alma işlemleri mağaza hesabınız üzerinden yürür</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <p class="mt-4 text-gray-700">
+            Bunların dışında, verilerinizi yalnızca mevzuatın gerektirdiği durumlarda ve ölçüde yetkili kamu kurum
+            ve kuruluşlarıyla paylaşabiliriz.
+        </p>
+
+        <h3 class="mt-8 font-semibold">Yurt dışına aktarım</h3>
+        <p class="mt-2 text-gray-700">
+            Google (Firebase, AdMob, Analytics), OpenAI ve RevenueCat'in sunucuları yurt dışında, ağırlıklı olarak
+            ABD'de bulunur. Hizmeti sunabilmek için verileriniz bu sunuculara aktarılır. Bu aktarım, KVKK m.9
+            kapsamında açık rızanıza veya mevzuatta öngörülen güvencelere (ör. standart sözleşme) dayanılarak yapılır.
+        </p>
+
+        <!-- 5 -->
+        <h2 id="reklam" class="mt-12 text-xl font-semibold scroll-mt-24">5. Reklam, izleme ve tercihleriniz</h2>
+        <p class="mt-2 text-gray-700">Sorula'da Google AdMob aracılığıyla reklam gösterilir. Uygulamanın
+            <strong>5.0.6 ve sonraki sürümlerinde:</strong></p>
+        <ul class="mt-3 list-disc pl-6 text-gray-700 space-y-2">
+            <li><strong>Kişiselleştirilmiş reklamlar</strong> yalnızca 13 yaş ve üzeri kullanıcılara ve yalnızca izin
+                verdiklerinde gösterilir. İzin vermezseniz kişiselleştirilmemiş reklamlar gösterilir.</li>
+            <li><strong>iOS:</strong> Kişiselleştirilmiş reklam için Apple'ın Uygulama İzleme Şeffaflığı (App
+                Tracking Transparency) izni istenir.</li>
+            <li><strong>AB, AEA ve Birleşik Krallık:</strong> Bu bölgelerdeki kullanıcılar Google'ın onay ekranını
+                (UMP) görür.</li>
+            <li><strong>13 yaşından küçükler (çocuk modu):</strong> Yalnızca kişiselleştirilmemiş ve çocuklara uygun
+                reklamlar gösterilir; izleme izni istenmez.</li>
+        </ul>
+        <p class="mt-3 text-gray-700">
+            <strong>Daha eski sürümlerde</strong> yaş sorusu ve uygulama içi izin ekranı yoktur; reklamlar cihazınızın
+            reklam ayarlarına göre kişiselleştirilebilir. iOS'ta izleme izni istenmediği için Apple reklam kimliğini
+            (IDFA) paylaşmaz; Android'de cihazın reklam kimliği Google ayarlarınıza göre kullanılır. Bu nedenle
+            uygulamayı güncellemenizi öneririz.
+        </p>
+
+        <h3 class="mt-6 font-semibold">Tercihinizi değiştirmek</h3>
+        <ul class="mt-2 list-disc pl-6 text-gray-700 space-y-1">
+            <li><strong>iOS:</strong> Ayarlar &gt; Gizlilik ve Güvenlik &gt; İzleme</li>
+            <li><strong>Android:</strong> Ayarlar &gt; Google &gt; Reklamlar (reklam kimliğinizi sıfırlayabilir veya
+                silebilirsiniz)</li>
+        </ul>
+
+        <!-- 6 -->
+        <h2 id="yapay-zeka" class="mt-12 text-xl font-semibold scroll-mt-24">6. Yapay zekâ özellikleri</h2>
+        <p class="mt-2 text-gray-700">
+            Fotoğraftan soru çözme, test üretme, yapay zekâ asistanı ve çalışma önerileri OpenAI modelleriyle çalışır.
+            OpenAI bu işlemlerde bizim adımıza veri işleyen hizmet sağlayıcıdır.
+        </p>
+        <ul class="mt-3 list-disc pl-6 text-gray-700 space-y-2">
+            <li><strong>OpenAI'ye gönderilenler:</strong> yüklediğiniz fotoğraf ve PDF'ler, asistana yazdığınız
+                mesajlar, seçtiğiniz not alıntıları ve çalışma bağlamınız (test istatistikleri, zayıf ve güçlü
+                konular, hedef sıralama/bölüm, seviye).</li>
+            <li><strong>OpenAI'ye gönderilmeyenler:</strong> adınız, e-posta adresiniz, kullanıcı kimliğiniz (uid),
+                il ve okul bilgileriniz.</li>
+            <li>OpenAI, kötüye kullanımı izlemek için API kayıtlarını kendi politikası gereği sınırlı bir süre
+                (en fazla 30 gün) saklayabilir.</li>
+        </ul>
+        <p class="mt-3 text-gray-700">
+            Fotoğraflarınızda ve mesajlarınızda gerekmedikçe kişisel bilgi (ad, telefon numarası, yüz vb.)
+            paylaşmamanızı öneririz.
         </p>
         <p class="mt-3 text-gray-700">
-            <strong>13 yaşından küçük</strong> kullanıcıların uygulamayı yalnızca ebeveyn veya yasal vasisinin
-            bilgisi ve izniyle kullanmasını bekleriz. Ebeveynler, çocuklarının verilerinin silinmesini
-            <a href="mailto:info@sorula.app" class="underline">info@sorula.app</a> adresinden talep edebilir;
-            talep üzerine veriler kaldırılır.
+            Yapay zekâ yanıtları hatalı olabilir. Hatalı veya uygunsuz bir yanıtı 5.0.6 ve sonraki sürümlerde
+            uygulamadaki <strong>"Bildir"</strong> seçeneğiyle, daha eski sürümlerde
+            <a href="mailto:info@sorula.app" class="underline">info@sorula.app</a> adresine veya Profil'deki <strong>"Şikayet / Öneri Bildir"</strong> formuyla
+            bize iletebilirsiniz.
         </p>
 
-        <h2 class="mt-12 text-xl font-semibold">8. Haklarınız</h2>
+        <!-- 7 -->
+        <h2 id="cocuklar" class="mt-12 text-xl font-semibold scroll-mt-24">7. Çocuklar ve gençler</h2>
         <p class="mt-2 text-gray-700">
-            6698 sayılı Kişisel Verilerin Korunması Kanunu (KVKK) kapsamında; kişisel verilerinizin işlenip
-            işlenmediğini öğrenme, bunlara erişme, düzeltilmesini veya silinmesini isteme ve işlemeye itiraz
-            etme haklarına sahipsiniz. Taleplerinizi
-            <a href="mailto:info@sorula.app" class="underline">info@sorula.app</a> adresine iletebilirsiniz.
+            Sorula; LGS ve 5–8. sınıf içerikleri dahil, ortaokul ve lise öğrencilerine yönelik sınav hazırlık
+            içerikleri sunar. Bu nedenle kullanıcılarımız arasında 18 yaşından küçükler bulunur. Uygulamanın 5.0.6 ve
+            sonraki sürümleri, yaşınızı belirlemek için tarafsız bir yaş sorusu sorar.
+        </p>
+        <h3 class="mt-6 font-semibold">13 yaşından küçükler: çocuk modu (5.0.6 ve sonraki sürümler)</h3>
+        <ul class="mt-2 list-disc pl-6 text-gray-700 space-y-1">
+            <li>Yalnızca kişiselleştirilmemiş ve çocuklara uygun reklamlar gösterilir.</li>
+            <li>İzleme izni istenmez.</li>
+            <li>İsteğe bağlı demografik bilgiler analiz hizmetine (Google Analytics) gönderilmez.</li>
+        </ul>
+        <p class="mt-3 text-gray-700">
+            Daha eski sürümlerde yaş sorusu ve çocuk modu yoktur; reklamlar ve analiz
+            <a href="#reklam" class="underline">bölüm 5</a>'te ve veri tablosunda anlatıldığı gibi çalışır. Çocuğunuz
+            Sorula kullanıyorsa uygulamayı 5.0.6 veya sonraki bir sürüme güncellemenizi öneririz.
+        </p>
+        <p class="mt-3 text-gray-700">
+            13 yaşından küçükler Sorula'yı yalnızca ebeveyn veya yasal vasilerinin bilgisi ve onayıyla
+            kullanabilir. 18 yaşından küçük kullanıcılar uygulamayı ebeveyn veya vasilerinin bilgisiyle kullanmalıdır
+            (bkz. <a href="/terms/" class="underline">Kullanım Şartları</a>).
+        </p>
+        <p class="mt-3 text-gray-700">
+            Ebeveynler ve vasiler, çocuklarının verileri hakkında bilgi almak veya silinmelerini istemek için
+            <a href="mailto:info@sorula.app" class="underline">info@sorula.app</a> adresine yazabilir. Hesabı
+            bulabilmemiz için hesabın e-posta adresi gibi bilgiler isteyebiliriz.
+        </p>
+        <p class="mt-3 text-gray-700">
+            Görünen ad diğer kullanıcılara göründüğü için çocukların gerçek adlarını kullanmamalarını öneririz.
+            Çocuk güvenliğiyle ilgili bir endişeyi bildirmek için
+            <a href="/destek/#cocuk-guvenligi" class="underline">Destek &gt; Çocuk güvenliği</a> bölümüne bakın.
         </p>
 
-        <h2 class="mt-12 text-xl font-semibold">9. Değişiklikler</h2>
-        <p class="mt-2 text-gray-700">
-            Bu politikayı zaman zaman güncelleyebiliriz. Önemli değişikliklerde sayfanın üstündeki
-            güncelleme tarihi değişir. Uygulamayı kullanmaya devam etmeniz güncel politikayı kabul ettiğiniz
-            anlamına gelir.
+        <!-- 8 -->
+        <h2 id="saklama" class="mt-12 text-xl font-semibold scroll-mt-24">8. Saklama süreleri</h2>
+        <p class="mt-2 text-gray-700">Verilerinizi hesabınız açık olduğu sürece saklarız. Hesabınızı sildiğinizde
+            verileriniz silinir; yalnızca aşağıdakiler bir süre daha kalabilir:</p>
+        <ul class="mt-3 list-disc pl-6 text-gray-700 space-y-1">
+            <li>Google Analytics'teki takma adlı (pseudonymous) kullanım verileri — Google Analytics'teki saklama
+                süresi dolana kadar</li>
+            <li>Firebase Crashlytics çökme kayıtları — yaklaşık 90 gün</li>
+            <li>RevenueCat, App Store ve Google Play'deki satın alma kayıtları — yasal ve mali yükümlülükler nedeniyle</li>
+            <li>OpenAI API kayıtları — OpenAI'nin kendi politikası gereği en fazla 30 gün</li>
+        </ul>
+        <p class="mt-3 text-gray-700">
+            Web sitesi analitiği (yalnızca onay verdiyseniz) Metricool'un kendi saklama kurallarına tabidir.
         </p>
 
-        <h2 class="mt-12 text-xl font-semibold">10. İletişim</h2>
+        <!-- 9 -->
+        <h2 id="silme" class="mt-12 text-xl font-semibold scroll-mt-24">9. Hesap ve veri silme</h2>
+        <ul class="mt-2 list-disc pl-6 text-gray-700 space-y-2">
+            <li><strong>Uygulama içinden:</strong> Profil &gt; Hesap Ayarları &gt; Hesabı Sil. Silme anında
+                gerçekleşir.</li>
+            <li><strong>E-postayla:</strong> Hesabınızın kayıtlı olduğu e-posta adresinden
+                <a href="mailto:info@sorula.app" class="underline">info@sorula.app</a> adresine yazın. Talebiniz en
+                geç 30 gün içinde tamamlanır.</li>
+        </ul>
+        <p class="mt-3 text-gray-700">
+            Hangi verilerin silindiğinin ve hangilerinin bir süre saklandığının tam listesi
+            <a href="/delete-account/" class="underline">Hesap ve Veri Silme</a> sayfasındadır.
+            Hesabı silmek aboneliğinizi iptal etmez; aboneliği App Store veya Google Play'den ayrıca iptal
+            etmelisiniz.
+        </p>
+
+        <!-- 10 -->
+        <h2 id="haklar" class="mt-12 text-xl font-semibold scroll-mt-24">10. Haklarınız ve başvuru</h2>
+        <p class="mt-2 text-gray-700">KVKK m.11 uyarınca şu haklara sahipsiniz:</p>
+        <ul class="mt-3 list-disc pl-6 text-gray-700 space-y-1">
+            <li>Kişisel verilerinizin işlenip işlenmediğini öğrenme</li>
+            <li>İşlenmişse buna ilişkin bilgi talep etme</li>
+            <li>İşlenme amacını ve verilerin amacına uygun kullanılıp kullanılmadığını öğrenme</li>
+            <li>Yurt içinde veya yurt dışında verilerin aktarıldığı üçüncü kişileri bilme</li>
+            <li>Eksik veya yanlış işlenmişse düzeltilmesini isteme</li>
+            <li>KVKK m.7'deki şartlar çerçevesinde silinmesini veya yok edilmesini isteme</li>
+            <li>Düzeltme, silme veya yok etme işlemlerinin, verilerin aktarıldığı üçüncü kişilere bildirilmesini
+                isteme</li>
+            <li>Verilerin yalnızca otomatik sistemlerle analiz edilmesi sonucunda aleyhinize bir sonuç çıkmasına
+                itiraz etme</li>
+            <li>Kanuna aykırı işleme nedeniyle zarara uğrarsanız zararın giderilmesini talep etme</li>
+        </ul>
+        <h3 class="mt-6 font-semibold">Nasıl başvurulur?</h3>
         <p class="mt-2 text-gray-700">
-            Gizlilik ile ilgili her türlü soru için:
-            <a href="mailto:info@sorula.app" class="underline font-medium">info@sorula.app</a><br />
-            <span class="text-gray-500 text-sm">A&amp;Y Creations</span>
+            <a href="mailto:info@sorula.app" class="underline">info@sorula.app</a> adresine, mümkünse hesabınızın
+            kayıtlı olduğu e-posta adresinden yazın. Başvurunuzu en geç <strong>30 gün</strong> içinde ücretsiz
+            olarak sonuçlandırırız. Kimliğinizi doğrulamak için ek bilgi isteyebiliriz.
+        </p>
+        <p class="mt-3 text-gray-700">
+            Başvurunuz reddedilirse, yanıtı yetersiz bulursanız veya süresi içinde yanıt alamazsanız Kişisel
+            Verileri Koruma Kurulu'na şikâyette bulunabilirsiniz. Avrupa Birliği, Avrupa Ekonomik Alanı veya
+            Birleşik Krallık'taysanız, bulunduğunuz yerin mevzuatından doğan haklarınızı da aynı adres üzerinden
+            kullanabilirsiniz.
+        </p>
+
+        <!-- 11 -->
+        <h2 id="cerezler" class="mt-12 text-xl font-semibold scroll-mt-24">11. Web sitesi ve çerezler</h2>
+        <p class="mt-2 text-gray-700">
+            sorula.app web sitesinde ziyaret istatistiklerini ölçmek için <strong>Metricool</strong> web analitiği
+            betiğini kullanıyoruz. Bu betik yalnızca sitedeki çerez bildiriminde <strong>"Kabul et"</strong>i
+            seçerseniz yüklenir; <strong>"Reddet"</strong>i seçerseniz yüklenmez. Kabul ederseniz ziyaret bilgileri
+            Metricool'un kendi gizlilik politikasına göre işlenir.
+        </p>
+        <p class="mt-3 text-gray-700">
+            Seçiminiz tarayıcınızın yerel depolamasında (<code>sorula_cerez</code> anahtarı) saklanır. Bu kayıt
+            yalnızca tercihinizi hatırlamak içindir ve bize gönderilmez. Sitede Metricool dışında analitik veya
+            reklam betiği kullanılmaz.
+        </p>
+        <div class="mt-4 rounded-xl border border-gray-200 p-5">
+            <p class="text-sm text-gray-700">Tercihinizi değiştirmek için kaydı silebilirsiniz; ana sayfayı yeniden
+                açtığınızda size tekrar sorulur.</p>
+            <button type="button" id="cerezSifirla"
+                class="mt-3 rounded-lg bg-gray-900 px-4 py-2 text-sm font-medium text-white hover:bg-gray-800">
+                Çerez tercihimi sıfırla
+            </button>
+            <p id="cerezSifirlaDurum" class="mt-2 text-sm text-gray-500" aria-live="polite"></p>
+        </div>
+
+        <!-- 12 -->
+        <h2 id="guvenlik" class="mt-12 text-xl font-semibold scroll-mt-24">12. Güvenlik</h2>
+        <p class="mt-2 text-gray-700">
+            Uygulama ile sunucular arasındaki veri aktarımı TLS ile şifrelenir. Firebase'de verilere erişimi
+            sınırlayan güvenlik kuralları kullanırız. Makul teknik önlemler almamıza rağmen internet üzerinden
+            yapılan hiçbir aktarım veya saklama yöntemi tamamen risksiz değildir. Bir güvenlik sorunu fark ederseniz
+            lütfen <a href="mailto:info@sorula.app" class="underline">info@sorula.app</a> adresine bildirin.
+        </p>
+
+        <!-- 13 -->
+        <h2 id="degisiklikler" class="mt-12 text-xl font-semibold scroll-mt-24">13. Değişiklikler</h2>
+        <p class="mt-2 text-gray-700">
+            Bu politikayı uygulama veya mevzuat değiştikçe güncelleyebiliriz. Güncel sürüm her zaman bu sayfadadır
+            ve üstteki tarih güncellenir. Bir değişiklik açık rızanızı gerektiriyorsa rızanızı yeniden isteriz.
+        </p>
+
+        <!-- 14 -->
+        <h2 id="iletisim" class="mt-12 text-xl font-semibold scroll-mt-24">14. İletişim</h2>
+        <p class="mt-2 text-gray-700">
+            Veri sorumlusu: Yiğit Özdemir (A&amp;Y Creations)<br />
+            E-posta: <a href="mailto:info@sorula.app" class="underline font-medium">info@sorula.app</a>
+        </p>
+        <p class="mt-3 text-sm text-gray-500">
+            İlgili sayfalar:
+            <a href="/kvkk/" class="underline">KVKK Aydınlatma Metni</a> ·
+            <a href="/terms/" class="underline">Kullanım Şartları</a> ·
+            <a href="/destek/" class="underline">Destek</a> ·
+            <a href="/delete-account/" class="underline">Hesap ve Veri Silme</a>
         </p>
 
     </main>
 
     <footer class="border-t border-gray-100">
-        <div class="max-w-3xl mx-auto px-6 py-8 flex flex-wrap items-center justify-between gap-4 text-sm text-gray-500">
-            <span>© 2026 A&amp;Y Creations</span>
-            <div class="flex gap-6">
-                <a href="/" class="hover:text-gray-900">Ana Sayfa</a>
-                <a href="/privacy/" class="hover:text-gray-900">Gizlilik</a>
-                <a href="/terms/" class="hover:text-gray-900">Şartlar</a>
-                <a href="/delete-account/" class="hover:text-gray-900">Hesap Silme</a>
+        <div class="max-w-3xl mx-auto px-6 py-8 text-sm text-gray-500">
+            <div class="flex flex-wrap items-center justify-between gap-4">
+                <span>© 2026 A&amp;Y Creations</span>
+                <nav aria-label="Yasal bağlantılar" class="flex flex-wrap gap-x-5 gap-y-2">
+                    <a href="/" class="hover:text-gray-900">Ana Sayfa</a>
+                    <a href="/privacy/" class="hover:text-gray-900">Gizlilik</a>
+                    <a href="/terms/" class="hover:text-gray-900">Kullanım Şartları</a>
+                    <a href="/kvkk/" class="hover:text-gray-900">KVKK</a>
+                    <a href="/destek/" class="hover:text-gray-900">Destek</a>
+                    <a href="/delete-account/" class="hover:text-gray-900">Hesap Silme</a>
+                </nav>
             </div>
+            <p class="mt-4 text-xs text-gray-400">Sorula; ÖSYM, MEB veya YÖK ile bağlantılı değildir.</p>
         </div>
     </footer>
+
+    <script>
+        (function () {
+            var buton = document.getElementById('cerezSifirla');
+            var durum = document.getElementById('cerezSifirlaDurum');
+            if (!buton) return;
+            buton.addEventListener('click', function () {
+                try {
+                    localStorage.removeItem('sorula_cerez');
+                    durum.textContent = 'Tercihiniz silindi. Ana sayfayı yeniden açtığınızda size tekrar sorulacak.';
+                } catch (e) {
+                    durum.textContent = 'Tercih silinemedi. Tarayıcı ayarlarından bu sitenin verilerini silebilirsiniz.';
+                }
+            });
+        })();
+    </script>
 
 </body>
 

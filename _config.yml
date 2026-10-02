@@ -1,0 +1,18 @@
+# GitHub Pages (Jekyll) ayarları.
+# Sayfalar düz HTML'dir (front matter yok); Jekyll onları olduğu gibi kopyalar.
+# ".well-known" nokta ile başladığı için varsayılan olarak yayımlanmaz — açıkça dahil edilir
+# (Apple App Site Association: /.well-known/apple-app-site-association).
+include:
+  - ".well-known"
+
+# Yayımlanması gerekmeyen geliştirme dosyaları.
+exclude:
+  - append_social.py
+  - fix_ayt.py
+  - replace_ayt.py
+  - package.json
+  - package-lock.json
+  - postcss.config.js
+  - tailwind.config.js
+  - input.css
+  - node_modules

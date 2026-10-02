@@ -14,7 +14,10 @@ module.exports = {
     "./ayt/**/*.html",
     "./privacy/**/*.html",
     "./terms/**/*.html",
-    "./delete-account/**/*.html"
+    "./delete-account/**/*.html",
+    // 2026-10-02: yeni yasal/destek sayfaları
+    "./kvkk/**/*.html",
+    "./destek/**/*.html"
   ],
   theme: {
     extend: {

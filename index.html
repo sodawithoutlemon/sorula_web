@@ -75,7 +75,19 @@
   }
   </script>
 
-  <script>function loadScript(a) { var b = document.getElementsByTagName("head")[0], c = document.createElement("script"); c.type = "text/javascript", c.src = "https://tracker.metricool.com/resources/be.js", c.onreadystatechange = a, c.onload = a, b.appendChild(c) } loadScript(function () { beTracker.t({ hash: "5bd0a1704758bd25e0a2e94505760927" }) });</script>
+  <!-- Metricool web analitiği: yalnızca çerez bildiriminde "Kabul et" seçilirse yüklenir
+       (tercih localStorage 'sorula_cerez' = 'kabul' | 'red'; bant ve mantık sayfanın sonunda). -->
+  <script>
+    function sorulaMetricoolYukle() {
+      if (window.__sorulaMetricool) return;
+      window.__sorulaMetricool = true;
+      var b = document.getElementsByTagName("head")[0], c = document.createElement("script");
+      c.type = "text/javascript";
+      c.src = "https://tracker.metricool.com/resources/be.js";
+      c.onload = function () { try { beTracker.t({ hash: "5bd0a1704758bd25e0a2e94505760927" }); } catch (e) { } };
+      b.appendChild(c);
+    }
+  </script>
 
   <!-- JSON-LD: SoftwareApplication -->
   <script type="application/ld+json">
@@ -90,11 +102,6 @@
       "@type": "Offer",
       "price": "0",
       "priceCurrency": "TRY"
-    },
-    "aggregateRating": {
-      "@type": "AggregateRating",
-      "ratingValue": "5.0",
-      "ratingCount": "100"
     },
     "downloadUrl": [
       "https://apps.apple.com/us/app/sorula-test-deneme-%C3%A7%C3%B6z%C3%BCm/id6740641580",
@@ -124,7 +131,7 @@
         "name": "Sorula ücretsiz mi?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "Evet, Sorula'nın 300.000'den fazla soruluk devasa soru bankası, yapay zeka destekli araçlar ve tüm temel özellikleri tamamen ücretsizdir."
+          "text": "Sorula'yı App Store ve Google Play'den ücretsiz indirebilirsin. Ücretsiz hesapla her gün bir test çözebilir, odalar ve haftalık lig sınavı gibi bazı modları ücretsiz kullanabilirsin. Yapay zeka araçlarının çoğu Premium ile açılır."
         }
       },
       {
@@ -148,7 +155,7 @@
         "name": "Sorula'nın soru bankasında kaç soru var?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "Sorula'da 300.000'den fazla soru bulunmaktadır ve yapay zeka ile talep üzerine sınırsız yeni soru üretilir."
+          "text": "Sorula'nın soru bankasında 300.000'e yakın soru bulunur. Yapay zeka ile isteğe göre yeni sorular da üretilebilir; yapay zeka araçlarının çoğu Premium'a dahildir."
         }
       }
     ]
@@ -390,7 +397,7 @@
                       </svg>
                     </div>
                     <div>
-                      <div class="text-sm font-extrabold text-gray-900">+300.000 Soru</div>
+                      <div class="text-sm font-extrabold text-gray-900">300.000'e yakın soru</div>
                       <div class="text-[10px] text-gray-400 font-semibold">Devasa Soru Bankası</div>
                     </div>
                   </div>
@@ -545,9 +552,9 @@
                   d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
               </svg>
             </div>
-            <h3 class="text-lg font-bold mb-3 text-gray-900">Bedava & Sınırsız İçerik</h3>
-            <p class="text-sm text-gray-500 leading-relaxed font-medium">+300.000 soruluk devasa soru bankası, yapay
-              zeka destekli araçlar ve tüm temel özellikler ücretsiz. Kaliteli eğitim herkese açık.</p>
+            <h3 class="text-lg font-bold mb-3 text-gray-900">Ücretsiz Başla</h3>
+            <p class="text-sm text-gray-500 leading-relaxed font-medium">Uygulamayı ücretsiz indir, her gün ücretsiz
+              bir test çöz. 300.000'e yakın soruluk banka ve Premium ile daha fazla yapay zeka aracı seni bekliyor.</p>
           </div>
           <div class="fade-up app-card p-8">
             <div class="w-12 h-12 rounded-2xl icon-purple flex items-center justify-center mb-6">
@@ -638,13 +645,13 @@
                   Motor</span>
               </div>
               <h3 class="text-xl lg:text-2xl font-bold mb-3 text-gray-900">Yapay Zeka Soru Üretici</h3>
-              <p class="text-gray-500 leading-relaxed font-medium mb-6">Talep üzerine sınırsız yeni soru üretir. Her
-                soru benzersiz, sınav formatında ve senin seviyene göre zorluk ayarlı.</p>
+              <p class="text-gray-500 leading-relaxed font-medium mb-6">İsteğine göre yeni soru üretir. Sorular sınav
+                formatında ve senin seviyene göre zorluk ayarlı.</p>
               <div class="flex items-center gap-2 text-sm text-gray-400 font-medium">
                 <svg class="w-4 h-4 text-brand-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
                 </svg>
-                Sınırsız soru oluşturma
+                İsteğe göre yeni soru
               </div>
             </div>
           </div>
@@ -736,12 +743,12 @@
           <div>
             <p class="fade-up text-sm font-bold text-brand-600 tracking-widest uppercase mb-5">Soru Bankası</p>
             <h2 class="fade-up text-3xl sm:text-4xl lg:text-5xl font-extrabold tracking-tight leading-tight mb-6">
-              Sınırsız soru.<br />
-              <span class="text-gradient-purple">Her zaman taze.</span>
+              300.000'e yakın soru.<br />
+              <span class="text-gradient-purple">İsteğe göre yenileri.</span>
             </h2>
             <p class="fade-up text-lg text-gray-500 max-w-lg leading-relaxed mb-10 font-medium">
-              Pratik malzemen asla bitmesin. Yapay zeka, konu, zorluk ve formata göre filtrelenmiş yeni sorular talep
-              üzerine üretir.
+              Soru bankasında 300.000'e yakın soru var. Yapay zeka da konu, zorluk ve formata göre isteğine uygun yeni
+              sorular üretir.
             </p>
 
             <div class="space-y-6">
@@ -753,9 +760,9 @@
                   </svg>
                 </div>
                 <div>
-                  <h3 class="text-base font-bold mb-1 text-gray-900">Sınırsız Soru Üretimi</h3>
-                  <p class="text-sm text-gray-500 leading-relaxed font-medium">Yapay zeka her seferinde yeni sorular
-                    üretir. Statik veritabanı sınırlaması yok.</p>
+                  <h3 class="text-base font-bold mb-1 text-gray-900">İsteğe Göre Yeni Soru</h3>
+                  <p class="text-sm text-gray-500 leading-relaxed font-medium">Yapay zeka seçtiğin konu ve zorlukta
+                    yeni sorular üretir. Yapay zeka araçlarının çoğu Premium'a dahildir.</p>
                 </div>
               </div>
               <div class="fade-up flex items-start gap-4">
@@ -947,8 +954,8 @@
             <p class="text-sm text-gray-400 font-medium">Çekirdek Hızlandırma<br />Programı</p>
           </div>
           <div class="fade-up text-center">
-            <div class="text-3xl lg:text-5xl font-extrabold text-gradient-purple mb-3">300K+</div>
-            <p class="text-sm text-gray-400 font-medium">Soru<br />Bankası</p>
+            <div class="text-3xl lg:text-5xl font-extrabold text-gradient-purple mb-3">~300K</div>
+            <p class="text-sm text-gray-400 font-medium">Soruluk<br />Banka</p>
           </div>
           <div class="fade-up text-center">
             <div class="text-3xl lg:text-5xl font-extrabold text-gradient-purple mb-3">12+</div>
@@ -1045,8 +1052,9 @@
         </div>
         <div class="bg-white rounded-2xl p-6 shadow-sm border border-gray-100">
           <h3 class="text-lg font-bold text-gray-900 mb-2">Sorula ücretsiz mi?</h3>
-          <p class="text-gray-600 font-medium">Evet, Sorula'nın 300.000'den fazla soruluk devasa soru bankası, yapay
-            zeka destekli araçlar ve tüm temel özellikleri tamamen ücretsizdir.</p>
+          <p class="text-gray-600 font-medium">Sorula'yı App Store ve Google Play'den ücretsiz indirebilirsin.
+            Ücretsiz hesapla her gün bir test çözebilir, odalar ve haftalık lig sınavı gibi bazı modları ücretsiz
+            kullanabilirsin. Yapay zeka araçlarının çoğu Premium ile açılır.</p>
         </div>
         <div class="bg-white rounded-2xl p-6 shadow-sm border border-gray-100">
           <h3 class="text-lg font-bold text-gray-900 mb-2">Sorula'da yapay zeka nasıl çalışıyor?</h3>
@@ -1061,8 +1069,8 @@
         </div>
         <div class="bg-white rounded-2xl p-6 shadow-sm border border-gray-100">
           <h3 class="text-lg font-bold text-gray-900 mb-2">Sorula'nın soru bankasında kaç soru var?</h3>
-          <p class="text-gray-600 font-medium">Sorula'da 300.000'den fazla soru bulunmaktadır ve yapay zeka ile talep
-            üzerine sınırsız yeni soru üretilir.</p>
+          <p class="text-gray-600 font-medium">Sorula'nın soru bankasında 300.000'e yakın soru bulunur. Yapay zeka ile
+            isteğe göre yeni sorular da üretilebilir; yapay zeka araçlarının çoğu Premium'a dahildir.</p>
         </div>
       </div>
     </div>
@@ -1206,8 +1214,59 @@
         <p class="text-xs text-gray-300 font-medium">&copy; 2026 Sorula — A&Y Creations. Tüm hakları saklıdır.</p>
         <p class="text-xs text-gray-300 font-medium">Hassasiyetle tasarlandı. Öğrenciler için inşa edildi.</p>
       </div>
+
+      <!-- yasal-baglantilar -->
+      <div class="mt-6 text-center">
+        <nav aria-label="Yasal bağlantılar"
+          class="flex flex-wrap justify-center gap-x-5 gap-y-2 text-xs font-medium text-gray-500">
+          <a href="/privacy/" class="hover:text-gray-700 transition-colors">Gizlilik</a>
+          <a href="/terms/" class="hover:text-gray-700 transition-colors">Kullanım Şartları</a>
+          <a href="/kvkk/" class="hover:text-gray-700 transition-colors">KVKK</a>
+          <a href="/destek/" class="hover:text-gray-700 transition-colors">Destek</a>
+          <a href="/delete-account/" class="hover:text-gray-700 transition-colors">Hesap Silme</a>
+        </nav>
+        <p class="mt-3 text-xs text-gray-500">Sorula; ÖSYM, MEB veya YÖK ile bağlantılı değildir.</p>
+      </div>
+      <!-- /yasal-baglantilar -->
     </div>
   </footer>
+
+  <!-- ========== ÇEREZ BİLDİRİMİ (Metricool yalnızca "Kabul et" sonrası yüklenir) ========== -->
+  <div id="cerezBanner" role="region" aria-labelledby="cerezBaslik" hidden
+    class="fixed bottom-4 left-4 right-4 sm:left-auto sm:max-w-md z-50 bg-white border border-gray-200 rounded-2xl shadow-xl p-5">
+    <p id="cerezBaslik" class="text-sm font-bold text-gray-900">Çerez tercihi</p>
+    <p class="mt-2 text-sm text-gray-600 leading-relaxed">
+      Sitenin nasıl kullanıldığını ölçmek için Metricool web analitiğini kullanmak istiyoruz. Yalnızca onay verirsen
+      yüklenir. <a href="/privacy/#cerezler" class="underline text-gray-900">Ayrıntılar</a>
+    </p>
+    <div class="mt-4 grid grid-cols-2 gap-3">
+      <button type="button" id="cerezRed"
+        class="rounded-full border-2 border-gray-900 bg-white px-4 py-2.5 text-sm font-semibold text-gray-900 hover:bg-gray-50">Reddet</button>
+      <button type="button" id="cerezKabul"
+        class="rounded-full border-2 border-gray-900 bg-white px-4 py-2.5 text-sm font-semibold text-gray-900 hover:bg-gray-50">Kabul et</button>
+    </div>
+  </div>
+  <script>
+    (function () {
+      var ANAHTAR = 'sorula_cerez';
+      var tercih = null;
+      try { tercih = localStorage.getItem(ANAHTAR); } catch (e) { }
+      if (tercih === 'kabul') { sorulaMetricoolYukle(); return; }
+      if (tercih === 'red') return;
+
+      var banner = document.getElementById('cerezBanner');
+      if (!banner) return;
+      banner.hidden = false;
+
+      function kaydet(deger) {
+        try { localStorage.setItem(ANAHTAR, deger); } catch (e) { }
+        banner.hidden = true;
+        if (deger === 'kabul') sorulaMetricoolYukle();
+      }
+      document.getElementById('cerezKabul').addEventListener('click', function () { kaydet('kabul'); });
+      document.getElementById('cerezRed').addEventListener('click', function () { kaydet('red'); });
+    })();
+  </script>
 
 
   <!-- ========== SCRIPTS ========== -->
