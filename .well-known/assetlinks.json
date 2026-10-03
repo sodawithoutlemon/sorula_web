@@ -1,0 +1,15 @@
+[
+  {
+    "relation": [
+      "delegate_permission/common.handle_all_urls"
+    ],
+    "target": {
+      "namespace": "android_app",
+      "package_name": "com.ay.sorulaquiztest",
+      "sha256_cert_fingerprints": [
+        "17:B3:9B:2B:14:4C:07:54:95:0B:A7:DD:AB:74:75:6F:90:06:3A:EC:D0:B4:8B:A1:6C:8A:BE:84:6F:05:F6:A8",
+        "D8:EE:42:93:21:D5:61:7F:F6:7F:B4:B5:75:E1:A9:54:2C:99:06:12:1B:C8:C4:46:B4:C9:26:31:1E:F0:18:00"
+      ]
+    }
+  }
+]
