@@ -104,8 +104,11 @@
                 <tbody class="text-gray-700">
                     <tr class="border-b border-gray-100">
                         <td class="p-3 align-top">E-posta adresi</td>
-                        <td class="p-3 align-top">Hesabınızı oluşturmak ve giriş yapmanızı sağlamak</td>
-                        <td class="p-3 align-top">Google Firebase</td>
+                        <td class="p-3 align-top">Hesabınızı oluşturmak ve giriş yapmanızı sağlamak. E-posta ve
+                            şifreyle kayıt olduğunuzda adresinizi doğrulamak için bu adrese 6 haneli bir kod
+                            göndeririz (bkz. <a href="#saklama" class="underline">bölüm 8</a>).</td>
+                        <td class="p-3 align-top">Google Firebase. Doğrulama e-postası info@sorula.app adresinden
+                            Google Workspace (Gmail) ile gönderilir.</td>
                     </tr>
                     <tr class="border-b border-gray-100">
                         <td class="p-3 align-top">Ad, kullanıcı adı ve avatar</td>
@@ -138,14 +141,17 @@
                             gönderilmez.</td>
                     </tr>
                     <tr class="border-b border-gray-100">
-                        <td class="p-3 align-top">Soru fotoğrafları ve PDF dosyaları</td>
-                        <td class="p-3 align-top">Yapay zekâ ile soru çözmek ve test üretmek</td>
+                        <td class="p-3 align-top">Soru fotoğrafları, PDF dosyaları ve asistan sohbetine eklediğiniz
+                            fotoğraflar</td>
+                        <td class="p-3 align-top">Yapay zekâ ile soru çözmek, çözümünüzü kontrol etmek ve test
+                            üretmek</td>
                         <td class="p-3 align-top">Firebase Storage, OpenAI</td>
                     </tr>
                     <tr class="border-b border-gray-100">
                         <td class="p-3 align-top">Oluşturduğunuz içerik: notlar, yapılacaklar, yapay zekâ asistanı
-                            mesajları, oda adları, geri bildirimler ve şikâyetler</td>
-                        <td class="p-3 align-top">İlgili özelliği sunmak</td>
+                            sohbetleri, oda adları, geri bildirimler ve şikâyetler</td>
+                        <td class="p-3 align-top">İlgili özelliği sunmak. Asistan sohbetleri, geçmiş sohbetlerinize
+                            dönebilmeniz için hesabınızda saklanır.</td>
                         <td class="p-3 align-top">Google Firebase. Asistan mesajları ve seçtiğiniz not alıntıları
                             OpenAI'ye de gönderilir.</td>
                     </tr>
@@ -186,6 +192,13 @@
                         <td class="p-3 align-top">Satın alma geçmişi ve abonelik durumu</td>
                         <td class="p-3 align-top">Aboneliğinizi yönetmek</td>
                         <td class="p-3 align-top">App Store / Google Play, RevenueCat</td>
+                    </tr>
+                    <tr class="border-b border-gray-100">
+                        <td class="p-3 align-top">Yalnız iOS: uygulamayı bir Apple Ads (App Store arama reklamı)
+                            üzerinden indirdiyseniz, hangi reklam kampanyası ve anahtar kelimeyle geldiğiniz (Apple'ın
+                            AdServices atıf bilgisi; reklam kimliği kullanılmaz)</td>
+                        <td class="p-3 align-top">Kendi reklam kampanyalarımızın işe yarayıp yaramadığını ölçmek</td>
+                        <td class="p-3 align-top">Apple, RevenueCat</td>
                     </tr>
                     <tr class="border-b border-gray-100">
                         <td class="p-3 align-top">Arama geçmişi (üniversite tercih sihirbazı)</td>
@@ -322,13 +335,20 @@
                     </tr>
                     <tr class="border-b border-gray-100">
                         <td class="p-3 align-top"><a class="underline" href="https://www.revenuecat.com/privacy" target="_blank" rel="noopener">RevenueCat</a></td>
-                        <td class="p-3 align-top">Abonelik durumunu yönetmek</td>
-                        <td class="p-3 align-top">Kullanıcı kimliği, satın alma ve abonelik bilgileri</td>
+                        <td class="p-3 align-top">Abonelik durumunu yönetmek; iOS'ta Apple Ads kampanyalarımızın
+                            sonucunu ölçmek</td>
+                        <td class="p-3 align-top">Kullanıcı kimliği, satın alma ve abonelik bilgileri, Apple Ads atıf
+                            bilgisi (yalnız iOS)</td>
                     </tr>
                     <tr>
                         <td class="p-3 align-top">Apple App Store, Google Play</td>
                         <td class="p-3 align-top">Ödeme ve abonelik işlemleri</td>
                         <td class="p-3 align-top">Satın alma işlemleri mağaza hesabınız üzerinden yürür</td>
+                    </tr>
+                    <tr class="border-b border-gray-100">
+                        <td class="p-3 align-top"><a class="underline" href="https://workspace.google.com/terms/privacy" target="_blank" rel="noopener">Google Workspace</a></td>
+                        <td class="p-3 align-top">E-posta doğrulama kodunu ve destek yazışmalarını göndermek</td>
+                        <td class="p-3 align-top">E-posta adresiniz ve doğrulama kodu</td>
                     </tr>
                 </tbody>
             </table>
@@ -341,7 +361,7 @@
 
         <h3 class="mt-8 font-semibold">Yurt dışına aktarım</h3>
         <p class="mt-2 text-gray-700">
-            Google (Firebase, AdMob, Analytics), OpenAI ve RevenueCat'in sunucuları yurt dışında, ağırlıklı olarak
+            Google (Firebase, AdMob, Analytics, Workspace), Apple, OpenAI ve RevenueCat'in sunucuları yurt dışında, ağırlıklı olarak
             ABD'de bulunur. Hizmeti sunabilmek için verileriniz bu sunuculara aktarılır. Bu aktarım, KVKK m.9
             kapsamında açık rızanıza veya mevzuatta öngörülen güvencelere (ör. standart sözleşme) dayanılarak yapılır.
         </p>
@@ -359,6 +379,15 @@
             <li><strong>13 yaşından küçükler (çocuk modu):</strong> Yalnızca kişiselleştirilmemiş ve çocuklara uygun
                 reklamlar gösterilir; izleme izni istenmez.</li>
         </ul>
+
+        <p class="mt-3 text-gray-700">
+            <strong>Apple Ads atfı (iOS):</strong> Sorula'yı App Store'daki arama reklamlarında da tanıtıyoruz.
+            Uygulamayı bir Apple Ads reklamından indirdiyseniz, Apple'ın AdServices sistemi hangi kampanyadan
+            geldiğinizi bize ve abonelik hizmet sağlayıcımız RevenueCat'e bildirir. Bu bilgi yalnızca kendi
+            reklamlarımızın sonucunu ölçmek için kullanılır; reklam kimliği kullanılmaz ve izleme izni
+            gerektirmez. Kişiselleştirilmiş Apple reklamlarını Ayarlar &gt; Gizlilik ve Güvenlik &gt; Apple
+            Reklamcılığı bölümünden kapatabilirsiniz.
+        </p>
 
         <h3 class="mt-6 font-semibold">Tercihinizi değiştirmek</h3>
         <ul class="mt-2 list-disc pl-6 text-gray-700 space-y-1">
@@ -381,6 +410,10 @@
                 il ve okul bilgileriniz.</li>
             <li>OpenAI, kötüye kullanımı izlemek için API kayıtlarını kendi politikası gereği sınırlı bir süre
                 (en fazla 30 gün) saklayabilir.</li>
+            <li><strong>Asistan sohbetleri:</strong> sohbetleriniz ve sohbete eklediğiniz fotoğraflar, daha sonra
+                kaldığınız yerden devam edebilmeniz için hesabınızda saklanır. Bir fotoğraf yalnızca eklendiği
+                mesajla birlikte OpenAI'ye gönderilir. Bir sohbeti geçmiş listesinden sildiğinizde sohbetin
+                metni ve fotoğrafları silinir.</li>
         </ul>
         <p class="mt-3 text-gray-700">
             Fotoğraflarınızda ve mesajlarınızda gerekmedikçe kişisel bilgi (ad, telefon numarası, yüz vb.)
@@ -440,8 +473,14 @@
             <li>RevenueCat, App Store ve Google Play'deki satın alma kayıtları — yasal ve mali yükümlülükler nedeniyle</li>
             <li>OpenAI API kayıtları — OpenAI'nin kendi politikası gereği en fazla 30 gün</li>
             <li>Şikâyet ve moderasyon kayıtları (şikâyet edilen içerik ve şikâyet sayısı) — kötüye kullanımı
-                önlemek için [SAHİP KARARI: süre, ör. 1 yıl]</li>
+                önlemek için 1 yıl</li>
         </ul>
+        <p class="mt-3 text-gray-700">
+            Asistan sohbetleriniz ve sohbetlere eklediğiniz fotoğraflar, siz silene ya da hesabınızı silene
+            kadar saklanır. E-posta doğrulama kodunun kendisi saklanmaz; sunucuda yalnızca kodun geri
+            çevrilemeyen bir özeti tutulur. Kod 10 dakika geçerlidir; bu özet doğrulama tamamlandığında ya da
+            hesabınızı sildiğinizde silinir.
+        </p>
         <p class="mt-3 text-gray-700">
             Kaydır &amp; Çöz yorumlarınız, siz silene ya da hesabınızı silene kadar saklanır. Kurallara aykırı
             bulunan yorumlar kaldırılır.
@@ -461,7 +500,7 @@
         </ul>
         <p class="mt-3 text-gray-700">
             Hesabınızı sildiğinizde Kaydır &amp; Çöz yorumlarınız, beğenileriniz, kaydettiğiniz sorular ve
-            öğrenme ölçütleriniz de silinir. Tek bir yorumunuzu yorumun yanındaki menüden istediğiniz zaman
+            öğrenme ölçütleriniz, asistan sohbetleriniz ve sohbetlere eklediğiniz fotoğraflar da silinir. Tek bir yorumunuzu yorumun yanındaki menüden istediğiniz zaman
             silebilirsiniz.
             Hangi verilerin silindiğinin ve hangilerinin bir süre saklandığının tam listesi
             <a href="/delete-account/" class="underline">Hesap ve Veri Silme</a> sayfasındadır.
