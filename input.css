@@ -115,3 +115,26 @@
 .bg-purple-soft { background: linear-gradient(180deg, #faf7fc 0%, #ffffff 100%); }
 .bg-purple-glow { background: radial-gradient(ellipse 60% 50% at 50% 0%, rgba(155, 124, 184, 0.06), transparent); }
 .divider { background: linear-gradient(90deg, transparent, #e9d5ff, transparent); height: 1px; }
+
+/* Çıkmış soru sayfaları (cikmis-sayfalari.mjs) — @layer dışında: JS'nin eklediği dogru/yanlis her zaman derlensin */
+.soru-kart {
+  @apply mb-5 rounded-[28px] bg-white border border-brand-100 p-5;
+  box-shadow: 0 6px 24px rgba(74, 54, 98, 0.10);
+}
+.soru-metni p + p { @apply mt-3; }
+.sik {
+  @apply w-full flex items-center gap-3 text-left border-2 border-gray-200 bg-white rounded-2xl px-3 py-2.5 mb-2 text-[15px] font-medium text-gray-900 transition-colors;
+}
+.sik:hover { @apply border-brand-300; }
+.sik-harf {
+  @apply shrink-0 w-8 h-8 rounded-full bg-gray-100 text-gray-800 flex items-center justify-center font-bold text-sm;
+}
+.sik.dogru { @apply border-emerald-500 bg-emerald-50; }
+.sik.dogru .sik-harf { @apply bg-emerald-500 text-white; }
+.sik.yanlis { @apply border-rose-400 bg-rose-50; }
+.sik.yanlis .sik-harf { @apply bg-rose-400 text-white; }
+.alt-cubuk { padding-bottom: max(12px, env(safe-area-inset-bottom)); }
+details > summary { list-style: none; }
+details > summary::-webkit-details-marker { display: none; }
+details[open] > summary span:last-child { transform: rotate(45deg); }
+.katex { font-size: 1.05em; }
