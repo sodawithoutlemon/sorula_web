@@ -138,10 +138,10 @@
       },
       {
         "@type": "Question",
-        "name": "Sorula'da yapay zeka nasıl çalışıyor?",
+        "name": "Sorula'da yapay zeka ne işe yarıyor?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "Sorula'da 5 yapay zeka motoru birlikte çalışır: AI Soru Üretici, Performans Analizi, Kamera ile Soru Analizi, PDF Analizi ve Adaptif Test Oluşturma. Bu motorlar öğrenme kalıplarını analiz eder ve kişiselleştirilmiş çalışma önerileri sunar."
+          "text": "Sorunun fotoğrafını çektiğinde ya da Asistan'a yazdığında çözümü adım adım anlatır; çözdüğün testlere göre zayıf konularını gösterir ve istersen seçtiğin konuda yeni sorular üretir. Yapay zeka araçlarının çoğu Premium'a dahildir."
         }
       },
       {
@@ -174,17 +174,20 @@
       <div class="max-w-7xl mx-auto px-6 lg:px-8">
         <div class="flex items-center justify-between h-16 lg:h-20">
           <!-- Logo -->
-          <a href="#" class="flex items-center gap-2.5 group">
-            <img src="logo.png" alt="Sorula Logo" class="w-9 h-9" />
+          <a href="#" class="flex items-center gap-2.5 group" aria-label="Sorula ana sayfa">
+            <span class="kep-kutu w-9 h-9" data-kep aria-hidden="true">
+              <span class="kep-grup"><img src="assets/ana/kep.png" alt="" /><img class="kep-puskul" src="assets/ana/puskul.png" alt="" /></span>
+              <img src="assets/ana/diploma.png" alt="" />
+            </span>
             <span class="text-xl font-bold tracking-tight text-gray-900">Sorula</span>
           </a>
 
           <!-- Desktop Nav -->
           <div class="hidden md:flex items-center gap-6">
+            <a href="#cikmis-sorular"
+              class="text-sm text-gray-500 hover:text-gray-900 transition-colors font-medium">Çıkmış Sorular</a>
             <a href="#ozellikler"
               class="text-sm text-gray-500 hover:text-gray-900 transition-colors font-medium">Özellikler</a>
-            <a href="#yapay-zeka" class="text-sm text-gray-500 hover:text-gray-900 transition-colors font-medium">Yapay
-              Zeka</a>
             <div class="relative group">
               <button
                 class="text-sm text-gray-500 hover:text-gray-900 transition-colors font-medium flex items-center gap-1"
@@ -270,10 +273,10 @@
       <!-- Mobile Menu -->
       <div id="mobileMenu" class="hidden md:hidden mobile-menu-bg border-t border-gray-100">
         <div class="px-6 py-6 space-y-4">
+          <a href="#cikmis-sorular"
+            class="block text-base text-gray-600 hover:text-gray-900 transition-colors font-medium">Çıkmış Sorular</a>
           <a href="#ozellikler"
             class="block text-base text-gray-600 hover:text-gray-900 transition-colors font-medium">Özellikler</a>
-          <a href="#yapay-zeka"
-            class="block text-base text-gray-600 hover:text-gray-900 transition-colors font-medium">Yapay Zeka</a>
           <div class="border-y border-gray-100 py-3 my-2 space-y-3 pl-2">
             <p class="text-xs font-bold text-gray-400 uppercase tracking-wider">Sınavlar</p>
             <a href="/tyt/" class="block text-sm text-gray-600 hover:text-brand-600 transition-colors font-medium">TYT
@@ -305,580 +308,135 @@
   <main>
 
     <!-- ========== HERO BÖLÜMÜ ========== -->
-    <section class="relative min-h-screen flex items-center pt-20 pb-24 bg-white bg-purple-glow overflow-hidden">
-      <div class="max-w-7xl mx-auto px-6 lg:px-8 w-full relative z-10">
-        <div class="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
+    <section class="relative pt-24 lg:pt-32 pb-16 lg:pb-24 bg-white overflow-hidden">
+      <div class="max-w-7xl mx-auto px-6 lg:px-8 w-full">
+        <div class="grid lg:grid-cols-2 gap-12 lg:gap-10 items-center">
           <!-- Sol: Metin -->
           <div class="text-center lg:text-left">
-            <div class="fade-up">
-              <div
-                class="inline-flex items-center gap-2 bg-brand-50 border border-brand-200 rounded-full px-4 py-1.5 mb-8">
-                <span class="w-2 h-2 rounded-full bg-brand-500 animate-pulse"></span>
-                <span class="text-xs font-semibold text-brand-700 tracking-wide">İTÜ Çekirdek Hızlandırma
-                  Programı</span>
-              </div>
+            <div class="flex flex-wrap gap-2 justify-center lg:justify-start">
+              <a href="/tyt/" class="sinav-cip">TYT</a>
+              <a href="/ayt/" class="sinav-cip">AYT</a>
+              <a href="/lgs/" class="sinav-cip">LGS</a>
+              <a href="/kpss/" class="sinav-cip">KPSS</a>
+              <span class="sinav-cip">YDS</span>
+              <span class="sinav-cip">Ehliyet</span>
             </div>
 
             <h1
-              class="fade-up text-4xl sm:text-5xl lg:text-6xl xl:text-7xl font-extrabold tracking-tight leading-[0.95] mb-6 text-gray-900">
-              Tüm Sınavlar,<br />
-              <span class="whitespace-nowrap">Tüm Sınav Sürecin</span><br />
-              <span class="text-gradient-purple">Tek Platform.</span>
+              class="text-[2.6rem] sm:text-6xl xl:text-[4.25rem] font-extrabold tracking-[-0.035em] leading-[1.02] mt-6 mb-6 text-gray-900">
+              Sınava hazırlığın<br />
+              tamamı, <span class="text-brand-700">tek uygulamada.</span>
             </h1>
 
-            <p
-              class="fade-up text-lg sm:text-xl text-gray-500 max-w-lg mx-auto lg:mx-0 mb-4 leading-relaxed font-medium">
-              Yapay zeka destekli sınav hazırlık süper uygulaması.
+            <p class="text-lg sm:text-xl text-gray-500 max-w-lg mx-auto lg:mx-0 mb-8 leading-relaxed">
+              Çıkmış sorular, konu konu eksik analizi, soru bankaları ve fotoğrafını çektiğin soruya adım adım çözüm.
             </p>
 
-            <div class="fade-up flex flex-wrap items-center gap-2 justify-center lg:justify-start mb-10">
-              <span class="text-sm font-bold text-gray-900">YKS</span><span class="text-gray-300">·</span>
-              <a href="/lgs/"
-                class="text-sm font-bold text-gray-900 hover:text-brand-600 transition-colors">LGS</a><span
-                class="text-gray-300">·</span>
-              <a href="/tyt/"
-                class="text-sm font-bold text-gray-900 hover:text-brand-600 transition-colors">TYT</a><span
-                class="text-gray-300">·</span>
-              <a href="/ayt/"
-                class="text-sm font-bold text-gray-900 hover:text-brand-600 transition-colors">AYT</a><span
-                class="text-gray-300">·</span>
-              <a href="/kpss/"
-                class="text-sm font-bold text-gray-900 hover:text-brand-600 transition-colors">KPSS</a><span
-                class="text-gray-300">·</span>
-              <span class="text-sm font-bold text-gray-900">Sınıf Sınavları</span><span class="text-gray-300">·</span>
-              <span class="text-sm font-medium text-brand-600">ve daha fazlası</span>
-            </div>
-
-            <div class="fade-up flex flex-col sm:flex-row items-center gap-4 justify-center lg:justify-start">
+            <div class="flex flex-col sm:flex-row items-center gap-3 justify-center lg:justify-start">
               <!-- App Store -->
               <a href="https://apps.apple.com/tr/app/id6740641580"
                 target="_blank"
-                class="group flex items-center gap-3 bg-gray-900 text-white px-7 py-4 rounded-2xl hover:bg-black transition-all w-full sm:w-auto justify-center shadow-lg shadow-gray-900/10">
-                <svg class="w-6 h-6" viewBox="0 0 24 24" fill="currentColor">
+                class="flex items-center gap-3 bg-gray-900 text-white px-6 py-3.5 rounded-2xl hover:bg-black transition-colors w-full sm:w-auto justify-center">
+                <svg class="w-6 h-6" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
                   <path
                     d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.8-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z" />
                 </svg>
                 <div class="text-left">
-                  <div class="text-[10px] font-medium leading-tight opacity-70">Şimdi İndir</div>
+                  <div class="text-[10px] font-medium leading-tight opacity-70">İndir</div>
                   <div class="text-base font-bold leading-tight">App Store</div>
                 </div>
               </a>
               <!-- Google Play -->
               <a href="https://play.google.com/store/apps/details?id=com.ay.sorulaquiztest" target="_blank"
-                class="group flex items-center gap-3 bg-white text-gray-900 border-2 border-gray-200 px-7 py-4 rounded-2xl hover:border-gray-300 hover:bg-gray-50 transition-all w-full sm:w-auto justify-center">
-                <svg class="w-6 h-6" viewBox="0 0 24 24" fill="currentColor">
+                class="flex items-center gap-3 bg-white text-gray-900 border-[1.5px] border-gray-200 px-6 py-3.5 rounded-2xl hover:border-gray-300 hover:bg-gray-50 transition-colors w-full sm:w-auto justify-center">
+                <svg class="w-6 h-6" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
                   <path
                     d="M3.609 1.814L13.792 12 3.61 22.186a.996.996 0 01-.61-.92V2.734a1 1 0 01.609-.92zm10.89 10.893l2.302 2.302-10.937 6.333 8.635-8.635zm3.199-3.199l2.302 2.302a1 1 0 010 1.38l-2.302 2.302L15.396 12l2.302-2.492zM5.864 2.658L16.8 8.99l-2.302 2.302L5.864 2.658z" />
                 </svg>
                 <div class="text-left">
-                  <div class="text-[10px] font-medium leading-tight opacity-50">Şimdi İndir</div>
+                  <div class="text-[10px] font-medium leading-tight opacity-60">İndir</div>
                   <div class="text-base font-bold leading-tight">Google Play</div>
                 </div>
               </a>
             </div>
-          </div>
 
-          <!-- Sağ: Telefon Mockup -->
-          <div class="flex justify-center lg:justify-end">
-            <div class="animate-float relative">
-              <div class="phone-frame w-[280px] sm:w-[300px]">
-                <div class="phone-screen relative">
-                  <img src="app-screenshot.png" alt="Sorula Uygulama Ekran Görüntüsü" class="w-full h-auto block"
-                    loading="lazy" />
-                </div>
-              </div>
-              <!-- Floating overlay badges -->
-              <div class="absolute -left-16 top-16 animate-float-slow hidden lg:block">
-                <div
-                  class="bg-white/95 backdrop-blur-sm border border-brand-200 rounded-2xl px-5 py-3.5 shadow-xl shadow-brand-500/10">
-                  <div class="flex items-center gap-3">
-                    <div class="w-10 h-10 rounded-xl bg-brand-50 flex items-center justify-center">
-                      <svg class="w-5 h-5 text-brand-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                          d="M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z" />
-                      </svg>
-                    </div>
-                    <div>
-                      <div class="text-sm font-extrabold text-gray-900">300.000'e yakın soru</div>
-                      <div class="text-[10px] text-gray-400 font-semibold">Devasa Soru Bankası</div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="absolute -right-12 bottom-24 animate-float hidden lg:block">
-                <div
-                  class="bg-white/95 backdrop-blur-sm border border-brand-200 rounded-2xl px-5 py-3.5 shadow-xl shadow-brand-500/10">
-                  <div class="flex items-center gap-3">
-                    <div class="w-10 h-10 rounded-xl bg-brand-50 flex items-center justify-center">
-                      <svg class="w-5 h-5 text-brand-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"
-                          d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z" />
-                      </svg>
-                    </div>
-                    <div>
-                      <div class="text-sm font-extrabold text-gray-900">Yapay Zeka</div>
-                      <div class="text-[10px] text-gray-400 font-semibold">Akıllı Analiz & Öneriler</div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <!-- Scroll indicator -->
-        <div class="absolute bottom-8 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 animate-scroll">
-          <span class="text-[10px] text-gray-300 uppercase tracking-widest font-medium">Keşfet</span>
-          <svg class="w-4 h-4 text-gray-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3" />
-          </svg>
-        </div>
-      </div>
-    </section>
-
-
-    <!-- ========== PROBLEM BÖLÜMÜ ========== -->
-    <section class="relative py-28 lg:py-36 bg-gray-50">
-      <div class="max-w-6xl mx-auto px-6 lg:px-8 text-center">
-        <p class="fade-up text-sm font-bold text-brand-600 tracking-widest uppercase mb-5">Sorun</p>
-        <h2 class="fade-up text-3xl sm:text-4xl lg:text-5xl font-extrabold tracking-tight leading-tight mb-6">
-          Sınav hazırlığı<br />
-          <span class="text-gray-300">dağınık.</span>
-        </h2>
-        <p class="fade-up text-lg text-gray-500 max-w-2xl mx-auto mb-16 leading-relaxed font-medium">
-          Öğrenciler düzinelerce uygulama, kitap ve kaynak arasında bocalıyor. Hiçbiri bağlantılı değil. Hiçbiri
-          kişiselleştirilmiş değil. Hiçbiri gerçekten zayıf noktalarını anlamıyor.
-        </p>
-
-        <div class="grid grid-cols-2 lg:grid-cols-5 gap-4">
-          <div class="fade-up app-card p-6 text-center">
-            <div class="w-12 h-12 mx-auto mb-4 rounded-xl icon-rose flex items-center justify-center">
-              <svg class="w-6 h-6 text-red-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"
-                  d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10" />
-              </svg>
-            </div>
-            <h3 class="text-sm font-bold mb-2 text-gray-900">Dağınık Kaynaklar</h3>
-            <p class="text-xs text-gray-400 leading-relaxed font-medium">Her sınav için farklı uygulama. Birleşik
-              deneyim yok.</p>
-          </div>
-          <div class="fade-up app-card p-6 text-center">
-            <div class="w-12 h-12 mx-auto mb-4 rounded-xl icon-amber flex items-center justify-center">
-              <svg class="w-6 h-6 text-amber-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"
-                  d="M12 8v4m0 4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
-              </svg>
-            </div>
-            <h3 class="text-sm font-bold mb-2 text-gray-900">Sıfır Kişiselleştirme</h3>
-            <p class="text-xs text-gray-400 leading-relaxed font-medium">Herkese aynı içerik. Adaptif öğrenme yok.</p>
-          </div>
-          <div class="fade-up app-card p-6 text-center">
-            <div class="w-12 h-12 mx-auto mb-4 rounded-xl icon-green flex items-center justify-center">
-              <svg class="w-6 h-6 text-emerald-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"
-                  d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
-              </svg>
-            </div>
-            <h3 class="text-sm font-bold mb-2 text-gray-900">Pahalı Eğitim Sistemi</h3>
-            <p class="text-xs text-gray-400 leading-relaxed font-medium">Dershaneler, özel dersler, ücretli uygulamalar.
-              Kaliteli eğitim herkese erişilebilir değil.</p>
-          </div>
-          <div class="fade-up app-card p-6 text-center">
-            <div class="w-12 h-12 mx-auto mb-4 rounded-xl icon-purple flex items-center justify-center">
-              <svg class="w-6 h-6 text-brand-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"
-                  d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z" />
-              </svg>
-            </div>
-            <h3 class="text-sm font-bold mb-2 text-gray-900">Yapay Zeka Yok</h3>
-            <p class="text-xs text-gray-400 leading-relaxed font-medium">Statik soru bankaları. Akıllı rehberlik yok.
-            </p>
-          </div>
-          <div class="fade-up app-card p-6 text-center col-span-2 lg:col-span-1">
-            <div class="w-12 h-12 mx-auto mb-4 rounded-xl icon-blue flex items-center justify-center">
-              <svg class="w-6 h-6 text-blue-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"
-                  d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6" />
-              </svg>
-            </div>
-            <h3 class="text-sm font-bold mb-2 text-gray-900">Takip Sistemi Yok</h3>
-            <p class="text-xs text-gray-400 leading-relaxed font-medium">Zayıf alanlar belirsiz. Yapılandırılmış gelişim
-              yolu yok.</p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-
-    <!-- ========== ÇÖZÜM BÖLÜMÜ ========== -->
-    <section id="ozellikler" class="relative py-28 lg:py-36 bg-white">
-      <div class="max-w-6xl mx-auto px-6 lg:px-8">
-        <div class="text-center mb-16">
-          <p class="fade-up text-sm font-bold text-brand-600 tracking-widest uppercase mb-5">Çözüm</p>
-          <h2 class="fade-up text-3xl sm:text-4xl lg:text-5xl font-extrabold tracking-tight leading-tight mb-6">
-            Tüm sınavlar.<br />
-            <span class="text-gradient-purple">Tek akıllı sistem.</span>
-          </h2>
-          <p class="fade-up text-lg text-gray-500 max-w-2xl mx-auto leading-relaxed font-medium">
-            Sorula, Türkiye'deki tüm önemli sınavları yapay zeka destekli tek bir platformda birleştirir.
-            Yapılandırılmış modlar, adaptif testler ve gerçek zamanlı analitik.
-          </p>
-        </div>
-
-        <!-- Sınav etiketleri -->
-        <div class="fade-up flex flex-wrap justify-center gap-3 mb-16 max-w-2xl mx-auto">
-          <span class="exam-badge rounded-full px-5 py-2.5 text-sm font-bold text-gray-700">YKS</span>
-          <a href="/tyt/"
-            class="exam-badge inline-block rounded-full px-5 py-2.5 text-sm font-bold text-gray-700 hover:bg-gray-100 transition-colors">TYT</a>
-          <a href="/ayt/"
-            class="exam-badge inline-block rounded-full px-5 py-2.5 text-sm font-bold text-gray-700 hover:bg-gray-100 transition-colors">AYT</a>
-          <a href="/lgs/"
-            class="exam-badge inline-block rounded-full px-5 py-2.5 text-sm font-bold text-gray-700 hover:bg-gray-100 transition-colors">LGS</a>
-          <a href="/kpss/"
-            class="exam-badge inline-block rounded-full px-5 py-2.5 text-sm font-bold text-gray-700 hover:bg-gray-100 transition-colors">KPSS</a>
-          <span class="exam-badge rounded-full px-5 py-2.5 text-sm font-bold text-gray-700">IELTS</span>
-          <span class="exam-badge rounded-full px-5 py-2.5 text-sm font-bold text-gray-700">TOEFL</span>
-          <span class="exam-badge rounded-full px-5 py-2.5 text-sm font-bold text-gray-700">YDS</span>
-          <span class="exam-badge rounded-full px-5 py-2.5 text-sm font-bold text-gray-700">YDT</span>
-          <span class="exam-badge rounded-full px-5 py-2.5 text-sm font-bold text-gray-700">Ehliyet</span>
-          <span class="exam-badge rounded-full px-5 py-2.5 text-sm font-bold text-gray-700">Lise Sınavları</span>
-          <span class="exam-badge rounded-full px-5 py-2.5 text-sm font-bold text-gray-700">Ortaokul Sınavları</span>
-        </div>
-
-        <!-- Çözüm kartları -->
-        <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
-          <div class="fade-up app-card p-8">
-            <div class="w-12 h-12 rounded-2xl icon-green flex items-center justify-center mb-6">
-              <svg class="w-6 h-6 text-emerald-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"
-                  d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
-              </svg>
-            </div>
-            <h3 class="text-lg font-bold mb-3 text-gray-900">Ücretsiz Başla</h3>
-            <p class="text-sm text-gray-500 leading-relaxed font-medium">Uygulamayı ücretsiz indir, her gün ücretsiz
-              bir test çöz. 300.000'e yakın soruluk banka ve Premium ile daha fazla yapay zeka aracı seni bekliyor.</p>
-          </div>
-          <div class="fade-up app-card p-8">
-            <div class="w-12 h-12 rounded-2xl icon-purple flex items-center justify-center mb-6">
-              <svg class="w-6 h-6 text-brand-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"
-                  d="M4 5a1 1 0 011-1h14a1 1 0 011 1v2a1 1 0 01-1 1H5a1 1 0 01-1-1V5zM4 13a1 1 0 011-1h6a1 1 0 011 1v6a1 1 0 01-1 1H5a1 1 0 01-1-1v-6zM16 13a1 1 0 011-1h2a1 1 0 011 1v6a1 1 0 01-1 1h-2a1 1 0 01-1-1v-6z" />
-              </svg>
-            </div>
-            <h3 class="text-lg font-bold mb-3 text-gray-900">Yapılandırılmış Sınav Modları</h3>
-            <p class="text-sm text-gray-500 leading-relaxed font-medium">Her sınavın kendine özel modu, doğru format,
-              süre ve soru yapısı var. Genel quizler yok.</p>
-          </div>
-          <div class="fade-up app-card p-8">
-            <div class="w-12 h-12 rounded-2xl icon-blue flex items-center justify-center mb-6">
-              <svg class="w-6 h-6 text-blue-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"
-                  d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
-              </svg>
-            </div>
-            <h3 class="text-lg font-bold mb-3 text-gray-900">Yapay Zeka Rehberliği</h3>
-            <p class="text-sm text-gray-500 leading-relaxed font-medium">Yapay zeka performansını analiz eder ve seninle
-              birlikte gelişen kişiselleştirilmiş bir çalışma yolu oluşturur.</p>
-          </div>
-          <div class="fade-up app-card p-8">
-            <div class="w-12 h-12 rounded-2xl icon-cyan flex items-center justify-center mb-6">
-              <svg class="w-6 h-6 text-cyan-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"
-                  d="M4 7v10c0 2.21 3.582 4 8 4s8-1.79 8-4V7M4 7c0 2.21 3.582 4 8 4s8-1.79 8-4M4 7c0-2.21 3.582-4 8-4s8 1.79 8 4m0 5c0 2.21-3.582 4-8 4s-8-1.79-8-4" />
-              </svg>
-            </div>
-            <h3 class="text-lg font-bold mb-3 text-gray-900">Birleşik Platform</h3>
-            <p class="text-sm text-gray-500 leading-relaxed font-medium">Tek giriş, tek panel, tek akıllı sistem. Her
-              sınav için. Her şey bağlantılı, her şey takip ediliyor.</p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-
-    <!-- ========== YAPAY ZEKA TEKNOLOJİSİ BÖLÜMÜ ========== -->
-    <section id="yapay-zeka" class="relative py-28 lg:py-36 bg-gray-50 overflow-hidden">
-      <!-- Background accent -->
-      <div
-        class="absolute w-[500px] h-[500px] bg-brand-500/[0.04] rounded-full blur-[100px] top-0 right-0 -translate-y-1/3 translate-x-1/4 pointer-events-none">
-      </div>
-      <div
-        class="absolute w-[400px] h-[400px] bg-brand-500/[0.03] rounded-full blur-[100px] bottom-0 left-0 translate-y-1/3 -translate-x-1/4 pointer-events-none">
-      </div>
-
-      <div class="max-w-6xl mx-auto px-6 lg:px-8 relative z-10">
-        <div class="text-center mb-16">
-          <div
-            class="fade-up inline-flex items-center gap-2 bg-brand-50 border border-brand-200 rounded-full px-4 py-1.5 mb-6">
-            <svg class="w-4 h-4 text-brand-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"
-                d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z" />
-            </svg>
-            <span class="text-xs font-bold text-brand-700">Yapay Zeka Destekli</span>
-          </div>
-          <h2
-            class="fade-up text-3xl sm:text-4xl lg:text-6xl font-extrabold tracking-tight leading-tight mb-6 text-gray-900">
-            Yapay zeka ile<br />
-            <span class="text-gradient-purple">güçlendirildi.</span>
-          </h2>
-          <p class="fade-up text-lg text-gray-500 max-w-2xl mx-auto leading-relaxed font-medium">
-            Öğrenme kalıplarını anlayan, içerik üreten ve hazırlığını hızlandıran beş yapay zeka motoru birlikte
-            çalışıyor.
-          </p>
-        </div>
-
-        <!-- AI Feature Grid — Top 2 -->
-        <div class="grid md:grid-cols-2 gap-5 mb-5">
-          <!-- AI Soru Üretici -->
-          <div class="fade-up app-card p-8 lg:p-10 relative overflow-hidden group">
             <div
-              class="absolute top-0 right-0 w-40 h-40 bg-gradient-to-bl from-brand-100/60 to-transparent rounded-bl-full transition-all group-hover:from-brand-100">
-            </div>
-            <div class="relative z-10">
-              <div class="flex items-center gap-3 mb-6">
-                <div class="w-12 h-12 rounded-2xl icon-purple flex items-center justify-center">
-                  <svg class="w-6 h-6 text-brand-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"
-                      d="M13 10V3L4 14h7v7l9-11h-7z" />
-                  </svg>
-                </div>
-                <span
-                  class="text-xs font-bold text-brand-700 bg-brand-50 px-3 py-1 rounded-full border border-brand-200">AI
-                  Motor</span>
+              class="grid grid-cols-3 gap-4 mt-10 pt-6 border-t border-gray-100 max-w-lg mx-auto lg:mx-0 text-left">
+              <div>
+                <div class="text-lg sm:text-2xl font-extrabold tracking-tight text-gray-900 whitespace-nowrap">4.028</div>
+                <div class="text-xs sm:text-sm text-gray-500">çıkmış soru, çözümlü</div>
               </div>
-              <h3 class="text-xl lg:text-2xl font-bold mb-3 text-gray-900">Yapay Zeka Soru Üretici</h3>
-              <p class="text-gray-500 leading-relaxed font-medium mb-6">İsteğine göre yeni soru üretir. Sorular sınav
-                formatında ve senin seviyene göre zorluk ayarlı.</p>
-              <div class="flex items-center gap-2 text-sm text-gray-400 font-medium">
-                <svg class="w-4 h-4 text-brand-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
-                </svg>
-                İsteğe göre yeni soru
+              <div>
+                <div class="text-lg sm:text-2xl font-extrabold tracking-tight text-gray-900 whitespace-nowrap">2018–2026</div>
+                <div class="text-xs sm:text-sm text-gray-500">TYT · AYT · LGS · KPSS</div>
+              </div>
+              <div>
+                <div class="text-lg sm:text-2xl font-extrabold tracking-tight text-gray-900 whitespace-nowrap">Ücretsiz</div>
+                <div class="text-xs sm:text-sm text-gray-500">her gün test çöz</div>
               </div>
             </div>
           </div>
 
-          <!-- AI Performans Analizi (üste taşındı) -->
-          <div class="fade-up app-card p-8 lg:p-10 relative overflow-hidden group">
-            <div
-              class="absolute top-0 right-0 w-40 h-40 bg-gradient-to-bl from-emerald-100/60 to-transparent rounded-bl-full transition-all group-hover:from-emerald-100">
+          <!-- Sağ: gerçek ekranlar (store/yakalamalar/telefon) -->
+          <div class="ana-sahne">
+            <div class="tel arka">
+              <img src="assets/ana/karne.webp" width="645" height="1398"
+                alt="Sorula çıkmış sınav karnesi: net, sıralama ve eksik konular" fetchpriority="high" />
             </div>
-            <div class="relative z-10">
-              <div class="flex items-center gap-3 mb-6">
-                <div class="w-12 h-12 rounded-2xl icon-green flex items-center justify-center">
-                  <svg class="w-6 h-6 text-emerald-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"
-                      d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" />
-                  </svg>
-                </div>
-                <span
-                  class="text-xs font-bold text-emerald-700 bg-emerald-50 px-3 py-1 rounded-full border border-emerald-200">AI
-                  Motor</span>
-              </div>
-              <h3 class="text-xl lg:text-2xl font-bold mb-3 text-gray-900">Performans Analizi</h3>
-              <p class="text-gray-500 leading-relaxed font-medium mb-6">Zayıf konuları tespit eder, derslerdeki
-                ilerlemeyi izler ve çalışma sürenizi optimize eden kişisel öneriler sunar.</p>
-              <div class="flex items-center gap-2 text-sm text-gray-400 font-medium">
-                <svg class="w-4 h-4 text-emerald-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
-                </svg>
-                Kişiselleştirilmiş öneriler
-              </div>
+            <div class="tel on">
+              <img src="assets/ana/ana-ekran.webp" width="645" height="1398"
+                alt="Sorula ana ekranı: Ders İlerleme Ağacı, Test Çöz, Çıkmış Sınavlar, Soru Bankaları" fetchpriority="high" />
             </div>
-          </div>
-        </div>
-
-        <!-- AI Feature Grid — Bottom 3 -->
-        <div class="grid md:grid-cols-3 gap-5">
-          <!-- Kamera ile Soru Analizi (alta taşındı) -->
-          <div class="fade-up app-card p-7">
-            <div class="w-12 h-12 rounded-2xl icon-rose flex items-center justify-center mb-5">
-              <svg class="w-6 h-6 text-rose-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"
-                  d="M3 9a2 2 0 012-2h.93a2 2 0 001.664-.89l.812-1.22A2 2 0 0110.07 4h3.86a2 2 0 011.664.89l.812 1.22A2 2 0 0018.07 7H19a2 2 0 012 2v9a2 2 0 01-2 2H5a2 2 0 01-2-2V9z" />
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"
-                  d="M15 13a3 3 0 11-6 0 3 3 0 016 0z" />
-              </svg>
-            </div>
-            <h3 class="text-lg font-bold mb-3 text-gray-900">Kamera ile Soru Analizi</h3>
-            <p class="text-sm text-gray-500 leading-relaxed font-medium">Sorunun fotoğrafını çek, yapay zeka anında
-              tanısın, çözsün ve adım adım açıklasın.</p>
-          </div>
-
-          <!-- AI PDF Analizi -->
-          <div class="fade-up app-card p-7">
-            <div class="w-12 h-12 rounded-2xl icon-cyan flex items-center justify-center mb-5">
-              <svg class="w-6 h-6 text-cyan-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"
-                  d="M7 21h10a2 2 0 002-2V9.414a1 1 0 00-.293-.707l-5.414-5.414A1 1 0 0012.586 3H7a2 2 0 00-2 2v14a2 2 0 002 2z" />
-              </svg>
-            </div>
-            <h3 class="text-lg font-bold mb-3 text-gray-900">PDF Analizi</h3>
-            <p class="text-sm text-gray-500 leading-relaxed font-medium">PDF yükle, yapay zeka soruları çıkarsın,
-              içeriği analiz etsin ve çalışma materyaline dönüştürsün.</p>
-          </div>
-
-          <!-- AI Adaptif Test -->
-          <div class="fade-up app-card p-7">
-            <div class="w-12 h-12 rounded-2xl icon-amber flex items-center justify-center mb-5">
-              <svg class="w-6 h-6 text-amber-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"
-                  d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.066 2.573c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.573 1.066c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.066-2.573c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z" />
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"
-                  d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
-              </svg>
-            </div>
-            <h3 class="text-lg font-bold mb-3 text-gray-900">Adaptif Test Oluşturma</h3>
-            <p class="text-sm text-gray-500 leading-relaxed font-medium">Sistem performans verilerine göre
-              kişiselleştirilmiş testler üretir, en çok gelişim gereken alanlara odaklanır.</p>
           </div>
         </div>
       </div>
     </section>
 
 
-    <!-- ========== SORU BANKASI BÖLÜMÜ ========== -->
-    <section id="soru-bankasi" class="relative py-28 lg:py-36 bg-white">
-      <div class="max-w-6xl mx-auto px-6 lg:px-8">
-        <div class="grid lg:grid-cols-2 gap-16 lg:gap-20 items-center">
-          <!-- Sol: İçerik -->
-          <div>
-            <p class="fade-up text-sm font-bold text-brand-600 tracking-widest uppercase mb-5">Soru Bankası</p>
-            <h2 class="fade-up text-3xl sm:text-4xl lg:text-5xl font-extrabold tracking-tight leading-tight mb-6">
-              300.000'e yakın soru.<br />
-              <span class="text-gradient-purple">İsteğe göre yenileri.</span>
-            </h2>
-            <p class="fade-up text-lg text-gray-500 max-w-lg leading-relaxed mb-10 font-medium">
-              Soru bankasında 300.000'e yakın soru var. Yapay zeka da konu, zorluk ve formata göre isteğine uygun yeni
-              sorular üretir.
-            </p>
+    <!-- ========== UYGULAMANIN İÇİNDEN ========== -->
+    <section class="relative py-20 lg:py-28 bg-white border-t border-gray-100">
+      <div class="max-w-7xl mx-auto px-6 lg:px-8">
+        <p class="text-sm font-bold text-brand-700 tracking-widest uppercase mb-3">Uygulamanın içinden</p>
+        <h2 class="text-3xl sm:text-4xl font-extrabold tracking-tight leading-tight mb-10 lg:mb-12 text-gray-900">
+          Gerçek ekranlar, gerçek özellikler.</h2>
 
-            <div class="space-y-6">
-              <div class="fade-up flex items-start gap-4">
-                <div class="w-10 h-10 rounded-xl icon-purple flex items-center justify-center flex-shrink-0 mt-0.5">
-                  <svg class="w-5 h-5 text-brand-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                      d="M12 6v6m0 0v6m0-6h6m-6 0H6" />
-                  </svg>
-                </div>
-                <div>
-                  <h3 class="text-base font-bold mb-1 text-gray-900">İsteğe Göre Yeni Soru</h3>
-                  <p class="text-sm text-gray-500 leading-relaxed font-medium">Yapay zeka seçtiğin konu ve zorlukta
-                    yeni sorular üretir. Yapay zeka araçlarının çoğu Premium'a dahildir.</p>
-                </div>
-              </div>
-              <div class="fade-up flex items-start gap-4">
-                <div class="w-10 h-10 rounded-xl icon-blue flex items-center justify-center flex-shrink-0 mt-0.5">
-                  <svg class="w-5 h-5 text-blue-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                      d="M3 4a1 1 0 011-1h16a1 1 0 011 1v2.586a1 1 0 01-.293.707l-6.414 6.414a1 1 0 00-.293.707V17l-4 4v-6.586a1 1 0 00-.293-.707L3.293 7.293A1 1 0 013 6.586V4z" />
-                  </svg>
-                </div>
-                <div>
-                  <h3 class="text-base font-bold mb-1 text-gray-900">Konu Bazlı Filtreleme</h3>
-                  <p class="text-sm text-gray-500 leading-relaxed font-medium">Soruları ders, konu ve alt konuya göre
-                    filtrele. Tam ihtiyacın olanı çalış.</p>
-                </div>
-              </div>
-              <div class="fade-up flex items-start gap-4">
-                <div class="w-10 h-10 rounded-xl icon-green flex items-center justify-center flex-shrink-0 mt-0.5">
-                  <svg class="w-5 h-5 text-emerald-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                      d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2" />
-                  </svg>
-                </div>
-                <div>
-                  <h3 class="text-base font-bold mb-1 text-gray-900">Akıllı Test Oluşturucu</h3>
-                  <p class="text-sm text-gray-500 leading-relaxed font-medium">Tercih ettiğin konu, soru sayısı ve
-                    zorluk seviyesiyle özel testler oluştur.</p>
-                </div>
-              </div>
-              <div class="fade-up flex items-start gap-4">
-                <div class="w-10 h-10 rounded-xl icon-amber flex items-center justify-center flex-shrink-0 mt-0.5">
-                  <svg class="w-5 h-5 text-amber-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                      d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
-                  </svg>
-                </div>
-                <div>
-                  <h3 class="text-base font-bold mb-1 text-gray-900">Gerçek Sınav Formatı</h3>
-                  <p class="text-sm text-gray-500 leading-relaxed font-medium">Her soru gerçek sınav formatında. Sınav
-                    günü sürpriz yok.</p>
-                </div>
-              </div>
-            </div>
+        <div class="grid grid-cols-2 lg:grid-cols-4 gap-x-5 gap-y-10 lg:gap-7">
+          <div class="fade-up">
+            <div class="tel tel-kucuk"><img src="assets/ana/karne.webp" width="645" height="1398" loading="lazy"
+                alt="Çıkmış sınav karnesi ekranı" /></div>
+            <h3 class="text-base sm:text-lg font-bold mt-5 mb-1 text-gray-900">Çıkmış sınav karnesi</h3>
+            <p class="text-sm text-gray-500 leading-relaxed">Netin, sıralaman ve eksik konuların tek sayfada.</p>
           </div>
-
-          <!-- Sağ: Mock Soru Kartı -->
-          <div class="flex justify-center">
-            <div class="fade-up scale-in relative w-full max-w-sm">
-              <div class="relative">
-                <div
-                  class="absolute -top-3 left-3 right-3 h-full bg-white border border-brand-100 rounded-3xl opacity-40">
-                </div>
-                <div
-                  class="absolute -top-1.5 left-1.5 right-1.5 h-full bg-white border border-brand-100 rounded-3xl opacity-70">
-                </div>
-                <div class="app-card p-8 relative !rounded-3xl">
-                  <div class="flex items-center justify-between mb-6">
-                    <span class="text-xs font-bold text-brand-700 bg-brand-50 px-3 py-1 rounded-full">TYT
-                      Matematik</span>
-                    <span class="text-xs text-gray-400 font-bold">Soru 47</span>
-                  </div>
-                  <div class="space-y-3 mb-8">
-                    <div class="h-3 bg-gray-100 rounded-full w-full"></div>
-                    <div class="h-3 bg-gray-100 rounded-full w-4/5"></div>
-                    <div class="h-3 bg-gray-100 rounded-full w-3/5"></div>
-                  </div>
-                  <div class="space-y-3">
-                    <div class="flex items-center gap-3 p-3 rounded-xl bg-gray-50 border border-gray-100">
-                      <div
-                        class="w-8 h-8 rounded-lg bg-gray-100 flex items-center justify-center text-xs font-bold text-gray-400">
-                        A</div>
-                      <div class="h-2.5 bg-gray-100 rounded-full w-32"></div>
-                    </div>
-                    <div class="flex items-center gap-3 p-3 rounded-xl bg-brand-50 border border-brand-200">
-                      <div
-                        class="w-8 h-8 rounded-lg bg-brand-100 flex items-center justify-center text-xs font-bold text-brand-700">
-                        B</div>
-                      <div class="h-2.5 bg-brand-200 rounded-full w-24"></div>
-                      <svg class="w-4 h-4 text-brand-600 ml-auto" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7" />
-                      </svg>
-                    </div>
-                    <div class="flex items-center gap-3 p-3 rounded-xl bg-gray-50 border border-gray-100">
-                      <div
-                        class="w-8 h-8 rounded-lg bg-gray-100 flex items-center justify-center text-xs font-bold text-gray-400">
-                        C</div>
-                      <div class="h-2.5 bg-gray-100 rounded-full w-28"></div>
-                    </div>
-                    <div class="flex items-center gap-3 p-3 rounded-xl bg-gray-50 border border-gray-100">
-                      <div
-                        class="w-8 h-8 rounded-lg bg-gray-100 flex items-center justify-center text-xs font-bold text-gray-400">
-                        D</div>
-                      <div class="h-2.5 bg-gray-100 rounded-full w-20"></div>
-                    </div>
-                    <div class="flex items-center gap-3 p-3 rounded-xl bg-gray-50 border border-gray-100">
-                      <div
-                        class="w-8 h-8 rounded-lg bg-gray-100 flex items-center justify-center text-xs font-bold text-gray-400">
-                        E</div>
-                      <div class="h-2.5 bg-gray-100 rounded-full w-36"></div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
+          <div class="fade-up">
+            <div class="tel tel-kucuk"><img src="assets/ana/kaydir-coz.webp" width="645" height="1398" loading="lazy"
+                alt="Kaydır ve Çöz ekranı" /></div>
+            <h3 class="text-base sm:text-lg font-bold mt-5 mb-1 text-gray-900">Kaydır &amp; Çöz</h3>
+            <p class="text-sm text-gray-500 leading-relaxed">Soruları kaydırarak çöz, püf noktayı anında gör.</p>
+          </div>
+          <div class="fade-up">
+            <div class="tel tel-kucuk"><img src="assets/ana/asistan.webp" width="645" height="1398" loading="lazy"
+                alt="Sorula Asistan ekranı" /></div>
+            <h3 class="text-base sm:text-lg font-bold mt-5 mb-1 text-gray-900">Sorula Asistan</h3>
+            <p class="text-sm text-gray-500 leading-relaxed">Takıldığın soruyu yaz ya da fotoğrafını çek.</p>
+          </div>
+          <div class="fade-up">
+            <div class="tel tel-kucuk"><img src="assets/ana/hata-defteri.webp" width="645" height="1398" loading="lazy"
+                alt="Hata Defteri ekranı" /></div>
+            <h3 class="text-base sm:text-lg font-bold mt-5 mb-1 text-gray-900">Hata Defteri</h3>
+            <p class="text-sm text-gray-500 leading-relaxed">Yanlışların konuya göre birikir, tekrar vakti gelince
+              hatırlatır.</p>
           </div>
         </div>
       </div>
     </section>
+
 
     <!-- cikmis-sorular (cikmis-sayfalari.mjs üretir) -->
     <section id="cikmis-sorular" class="relative py-20 lg:py-28 bg-white border-t border-gray-100">
-      <div class="max-w-6xl mx-auto px-6 lg:px-8">
-        <p class="text-sm font-bold text-brand-600 tracking-widest uppercase mb-5">Çıkmış Sorular</p>
-        <h2 class="text-3xl sm:text-4xl lg:text-5xl font-extrabold tracking-tight leading-tight mb-6">4.028 çıkmış soru,<br /><span class="text-gradient-purple">çözümleriyle.</span></h2>
-        <p class="text-lg text-gray-500 max-w-2xl leading-relaxed mb-10 font-medium">TYT, AYT, LGS ve KPSS'de hangi yıl hangi konudan kaç soru çıktı? Yıl yıl konu dağılımı ve çözümlü örnek sorular.</p>
+      <div class="max-w-7xl mx-auto px-6 lg:px-8">
+        <p class="text-sm font-bold text-brand-700 tracking-widest uppercase mb-3">Çıkmış Sorular</p>
+        <h2 class="text-3xl sm:text-4xl font-extrabold tracking-tight leading-tight mb-4 text-gray-900">4.028 çıkmış soru,<br /><span class="text-brand-700">çözümleriyle.</span></h2>
+        <p class="text-lg text-gray-500 max-w-2xl leading-relaxed mb-10">TYT, AYT, LGS ve KPSS'de hangi yıl hangi konudan kaç soru çıktı? Yıl yıl konu dağılımı ve çözümlü örnek sorular.</p>
         <div class="grid sm:grid-cols-2 xl:grid-cols-4 gap-5">
             <div class="app-card p-6">
               <div class="flex items-baseline justify-between mb-1"><h3 class="text-xl font-extrabold text-gray-900">TYT</h3><span class="text-xs font-semibold text-gray-500">2018–2026</span></div>
@@ -910,169 +468,113 @@
     <!-- /cikmis-sorular -->
 
 
+    <!-- ========== ÖZELLİKLER (gerçek ekran kesitleri) ========== -->
+    <section id="ozellikler" class="relative py-20 lg:py-28 bg-gray-50 border-t border-gray-100">
+      <div class="max-w-7xl mx-auto px-6 lg:px-8">
+        <p class="text-sm font-bold text-brand-700 tracking-widest uppercase mb-3">Özellikler</p>
+        <h2 class="text-3xl sm:text-4xl font-extrabold tracking-tight leading-tight mb-4 text-gray-900">
+          Çalışmanın her adımı için bir araç.</h2>
+        <p class="text-lg text-gray-500 max-w-2xl leading-relaxed mb-10 lg:mb-12">Soru bankaları, çıkmış sınavlar,
+          Kaydır &amp; Çöz ve Asistan'ın yanında bunlar da aynı uygulamada.</p>
 
-    <!-- ========== VERİMLİLİK EKOSİSTEMİ BÖLÜMÜ ========== -->
-    <section class="relative py-28 lg:py-36 bg-gray-50">
-      <div class="max-w-6xl mx-auto px-6 lg:px-8">
-        <div class="text-center mb-16">
-          <p class="fade-up text-sm font-bold text-brand-600 tracking-widest uppercase mb-5">Verimlilik</p>
-          <h2 class="fade-up text-3xl sm:text-4xl lg:text-5xl font-extrabold tracking-tight leading-tight mb-6">
-            Sınavdan fazlası.<br />
-            <span class="text-gradient-purple">Eksiksiz çalışma sistemi.</span>
-          </h2>
-          <p class="fade-up text-lg text-gray-500 max-w-2xl mx-auto leading-relaxed font-medium">
-            Sorula sadece bir soru bankası değil. Tüm araçlar yapay zeka destekli ve sana özel olarak
-            kişiselleştiriliyor.
-          </p>
-        </div>
-
-        <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-5">
-          <div class="fade-up app-card p-7 text-center">
-            <div class="w-14 h-14 mx-auto rounded-2xl icon-blue flex items-center justify-center mb-5">
-              <svg class="w-7 h-7 text-blue-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"
-                  d="M11 5H6a2 2 0 00-2 2v11a2 2 0 002 2h11a2 2 0 002-2v-5m-1.414-9.414a2 2 0 112.828 2.828L11.828 15H9v-2.828l8.586-8.586z" />
-              </svg>
-            </div>
-            <h3 class="text-base font-bold mb-2 text-gray-900">AI Destekli Notlar</h3>
-            <p class="text-xs text-gray-400 leading-relaxed font-medium">Yapay zeka çalışma verilerine göre sana özel
-              notlar ve özetler oluşturur. Ders ve konuya göre organize.</p>
-          </div>
-          <div class="fade-up app-card p-7 text-center">
-            <div class="w-14 h-14 mx-auto rounded-2xl icon-green flex items-center justify-center mb-5">
-              <svg class="w-7 h-7 text-emerald-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"
-                  d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-6 9l2 2 4-4" />
-              </svg>
-            </div>
-            <h3 class="text-base font-bold mb-2 text-gray-900">AI Yapılacaklar</h3>
-            <p class="text-xs text-gray-400 leading-relaxed font-medium">Yapay zeka analizlerine göre kişiselleştirilmiş
-              görev listeleri. Neyi, ne zaman çalışman gerektiğini bilir.</p>
-          </div>
-          <div class="fade-up app-card p-7 text-center">
-            <div class="w-14 h-14 mx-auto rounded-2xl icon-purple flex items-center justify-center mb-5">
-              <svg class="w-7 h-7 text-brand-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"
-                  d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
-              </svg>
-            </div>
-            <h3 class="text-base font-bold mb-2 text-gray-900">AI Çalışma Takvimi</h3>
-            <p class="text-xs text-gray-400 leading-relaxed font-medium">Performansına göre kişiselleştirilmiş çalışma
-              programı. Hedeflerine uygun günlük plan yapay zeka tarafından oluşturulur.</p>
-          </div>
-          <div class="fade-up app-card p-7 text-center">
-            <div class="w-14 h-14 mx-auto rounded-2xl icon-rose flex items-center justify-center mb-5">
-              <svg class="w-7 h-7 text-rose-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"
-                  d="M16 8v8m-4-5v5m-4-2v2m-2 4h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z" />
-              </svg>
-            </div>
-            <h3 class="text-base font-bold mb-2 text-gray-900">İlerleme Takibi</h3>
-            <p class="text-xs text-gray-400 leading-relaxed font-medium">Görsel paneller zaman içindeki ilerlemeni
-              gösterir. Yapay zeka zayıf noktalarını belirler, güçlü yönlerini vurgular.</p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-
-    <!-- ========== GÜVEN & BÜYÜME BÖLÜMÜ ========== -->
-    <section id="hakkinda" class="relative py-28 lg:py-36 bg-white">
-      <div class="max-w-5xl mx-auto px-6 lg:px-8">
-        <div class="text-center mb-16">
-          <p class="fade-up text-sm font-bold text-brand-600 tracking-widest uppercase mb-5">Güven & Büyüme</p>
-          <h2 class="fade-up text-3xl sm:text-4xl lg:text-5xl font-extrabold tracking-tight leading-tight mb-6">
-            Ölçeklenmek için<br />
-            <span class="text-gradient-purple">tasarlandı.</span>
-          </h2>
-        </div>
-
-        <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-8 mb-16">
-          <div class="fade-up text-center">
-            <div class="text-3xl lg:text-5xl font-extrabold text-gradient-purple mb-3">İTÜ</div>
-            <p class="text-sm text-gray-400 font-medium">Çekirdek Hızlandırma<br />Programı</p>
-          </div>
-          <div class="fade-up text-center">
-            <div class="text-3xl lg:text-5xl font-extrabold text-gradient-purple mb-3">~300K</div>
-            <p class="text-sm text-gray-400 font-medium">Soruluk<br />Banka</p>
-          </div>
-          <div class="fade-up text-center">
-            <div class="text-3xl lg:text-5xl font-extrabold text-gradient-purple mb-3">12+</div>
-            <p class="text-sm text-gray-400 font-medium">Desteklenen<br />Sınav Türü</p>
-          </div>
-          <div class="fade-up text-center">
-            <div class="text-3xl lg:text-5xl font-extrabold text-gradient-purple mb-3">5</div>
-            <p class="text-sm text-gray-400 font-medium">Birlikte Çalışan<br />AI Motoru</p>
-          </div>
-          <div class="fade-up text-center col-span-2 sm:col-span-1">
-            <div class="text-3xl lg:text-5xl font-extrabold text-gradient-purple mb-3">10K+</div>
-            <p class="text-sm text-gray-400 font-medium">İndirme<br />Sayısı</p>
-          </div>
-        </div>
-
-        <div class="fade-up app-card p-8 lg:p-12 text-center max-w-3xl mx-auto">
-          <div class="flex items-center justify-center mb-6">
-            <div class="w-12 h-12 rounded-xl icon-purple flex items-center justify-center">
-              <svg class="w-6 h-6 text-brand-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"
-                  d="M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z" />
-              </svg>
+        <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-5 lg:gap-6">
+          <div id="yapay-zeka" class="fade-up ozellik-kart">
+            <div class="ozellik-ekran"><img src="assets/ana/kamera.webp" width="600" height="512" loading="lazy" alt="Soru Analizi ekranı: kitaptaki sorunun fotoğrafı ve adım adım çözümü" /></div>
+            <div class="p-6">
+              <h3 class="text-lg font-bold mb-1.5 text-gray-900">Fotoğrafını çek, adım adım çöz</h3>
+              <p class="text-sm text-gray-500 leading-relaxed">Kitaptaki soruyu çek; çözüm adım adım gelsin, ardından benzer sorularla pekiştir.</p>
             </div>
           </div>
-          <h3 class="text-lg lg:text-xl font-bold mb-4 text-gray-900">Ölçeklenebilir AI Mimarisi</h3>
-          <p class="text-gray-500 leading-relaxed max-w-xl mx-auto font-medium">
-            Sorula, milyonlarca öğrenciyle birlikte büyümek üzere tasarlanmış modüler, ölçeklenebilir bir yapay zeka
-            altyapısı üzerine inşa edildi. Her özellik güvenilirlik, hız ve sürekli gelişim için tasarlandı.
-          </p>
+          <div id="soru-bankasi" class="fade-up ozellik-kart">
+            <div class="ozellik-ekran"><img src="assets/ana/test-olustur.webp" width="600" height="512" loading="lazy" alt="Test Oluştur ekranı: sınav, ders, konu, soru sayısı ve süre seçimi" /></div>
+            <div class="p-6">
+              <h3 class="text-lg font-bold mb-1.5 text-gray-900">Kendi testini oluştur</h3>
+              <p class="text-sm text-gray-500 leading-relaxed">Sınavı, dersi, konuyu, soru sayısını ve süreyi seç. İstersen testi PDF olarak al.</p>
+            </div>
+          </div>
+          <div class="fade-up ozellik-kart">
+            <div class="ozellik-ekran"><img src="assets/ana/konu-haritasi.webp" width="600" height="512" loading="lazy" alt="Zayıf Konu Haritası ekranı: konu konu doğruluk oranları" /></div>
+            <div class="p-6">
+              <h3 class="text-lg font-bold mb-1.5 text-gray-900">Zayıf konu haritası</h3>
+              <p class="text-sm text-gray-500 leading-relaxed">Her konudaki doğruluk oranın tek bakışta: güçlü, orta ve zayıf konuların ayrı ayrı.</p>
+            </div>
+          </div>
+          <div class="fade-up ozellik-kart">
+            <div class="ozellik-ekran"><img src="assets/ana/sinav-ligi.webp" width="600" height="512" loading="lazy" alt="Sınav Ligi ekranı: haftalık sınav ve lig sıralaması" /></div>
+            <div class="p-6">
+              <h3 class="text-lg font-bold mb-1.5 text-gray-900">Haftalık Sınav Ligi</h3>
+              <p class="text-sm text-gray-500 leading-relaxed">Herkes aynı sınavı çözer; hafta sonunda netlere göre sıralanırsın.</p>
+            </div>
+          </div>
+          <div class="fade-up ozellik-kart">
+            <div class="ozellik-ekran"><img src="assets/ana/test-odasi.webp" width="600" height="512" loading="lazy" alt="Test odası ekranı: oda kodu ve katılımcılar" /></div>
+            <div class="p-6">
+              <h3 class="text-lg font-bold mb-1.5 text-gray-900">Arkadaşlarınla test odası</h3>
+              <p class="text-sm text-gray-500 leading-relaxed">Oda kodunu paylaş, aynı testi arkadaşlarınla birlikte çözün.</p>
+            </div>
+          </div>
+          <div class="fade-up ozellik-kart">
+            <div class="ozellik-ekran"><img src="assets/ana/tercih.webp" width="600" height="512" loading="lazy" alt="Tercih Sihirbazı ekranı: tahmini sıralama ve hedef" /></div>
+            <div class="p-6">
+              <h3 class="text-lg font-bold mb-1.5 text-gray-900">Tercih Sihirbazı</h3>
+              <p class="text-sm text-gray-500 leading-relaxed">Tahmini sıralamanı gör, hedefine göre neye çalışman gerektiğini öğren.</p>
+            </div>
+          </div>
         </div>
-      </div>
-    </section>
 
-
-    <!-- ========== SON CTA BÖLÜMÜ ========== -->
-    <section class="relative py-28 lg:py-40 bg-purple-soft overflow-hidden">
-      <div
-        class="absolute w-[600px] h-[600px] bg-brand-500/5 rounded-full blur-[100px] top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 pointer-events-none">
-      </div>
-
-      <div class="max-w-4xl mx-auto px-6 lg:px-8 text-center relative z-10">
-        <div class="fade-up mb-10">
-          <img src="logo.png" alt="Sorula" class="w-20 h-20 mx-auto mb-8 drop-shadow-lg" />
-        </div>
-
-        <h2
-          class="fade-up text-4xl sm:text-5xl lg:text-6xl xl:text-7xl font-extrabold tracking-tight leading-[1.05] mb-8 text-gray-900">
-          Tüm Sınavlar<br />Tüm Sınav Sürecin<br />
-          <span class="text-gradient-purple">Tek Platform</span>
-        </h2>
-        <p class="fade-up text-lg text-gray-500 max-w-xl mx-auto mb-12 leading-relaxed font-medium">
-          Sınav hazırlığını yapay zeka ile birleştiren binlerce öğrenciye katıl.
+        <p class="text-sm text-gray-500 leading-relaxed mt-10">
+          <span class="font-bold text-gray-900">Ayrıca:</span> Ders İlerleme Ağacı · Sınav Tekrar Setleri · Hata
+          Defteri · çalışma takvimi · notlar · yapılacaklar.<br />
+          <span class="font-bold text-gray-900">Sınavlar:</span>
+          YKS (<a href="/tyt/" class="hover:text-brand-700 underline underline-offset-2">TYT</a>,
+          <a href="/ayt/" class="hover:text-brand-700 underline underline-offset-2">AYT</a>),
+          <a href="/lgs/" class="hover:text-brand-700 underline underline-offset-2">LGS</a>,
+          <a href="/kpss/" class="hover:text-brand-700 underline underline-offset-2">KPSS</a>, YDS, YDT, IELTS, TOEFL,
+          Ehliyet, lise ve ortaokul sınavları.
         </p>
+      </div>
+    </section>
 
-        <div class="fade-up flex flex-col sm:flex-row items-center gap-4 justify-center">
-          <a href="https://apps.apple.com/tr/app/id6740641580" target="_blank"
-            class="group flex items-center gap-3 bg-gray-900 text-white px-7 py-4 rounded-2xl hover:bg-black transition-all w-full sm:w-auto justify-center shadow-lg shadow-gray-900/10">
-            <svg class="w-6 h-6" viewBox="0 0 24 24" fill="currentColor">
-              <path
-                d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.8-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z" />
-            </svg>
-            <div class="text-left">
-              <div class="text-[10px] font-medium leading-tight opacity-70">Şimdi İndir</div>
-              <div class="text-base font-bold leading-tight">App Store</div>
+
+    <!-- ========== SON ÇAĞRI ========== -->
+    <section class="relative py-20 lg:py-28 bg-white border-t border-gray-100">
+      <div class="max-w-3xl mx-auto px-6 lg:px-8 text-center">
+        <span class="kep-kutu w-24 h-24 mx-auto mb-6 cursor-pointer" data-kep data-kep-gorunce aria-hidden="true">
+          <span class="kep-grup"><img src="assets/ana/kep.png" alt="" /><img class="kep-puskul" src="assets/ana/puskul.png" alt="" /></span>
+          <img src="assets/ana/diploma.png" alt="" />
+        </span>
+        <h2 class="text-4xl sm:text-5xl font-extrabold tracking-[-0.03em] leading-[1.05] mb-5 text-gray-900">
+          Sınava bugün <span class="text-brand-700">başla.</span></h2>
+        <p class="text-lg text-gray-500 max-w-md mx-auto mb-9 leading-relaxed">Sorula ücretsiz; her gün ücretsiz bir
+          test çözebilirsin.</p>
+            <div class="flex flex-col sm:flex-row items-center gap-3 justify-center">
+              <!-- App Store -->
+              <a href="https://apps.apple.com/tr/app/id6740641580"
+                target="_blank"
+                class="flex items-center gap-3 bg-gray-900 text-white px-6 py-3.5 rounded-2xl hover:bg-black transition-colors w-full sm:w-auto justify-center">
+                <svg class="w-6 h-6" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                  <path
+                    d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.8-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z" />
+                </svg>
+                <div class="text-left">
+                  <div class="text-[10px] font-medium leading-tight opacity-70">İndir</div>
+                  <div class="text-base font-bold leading-tight">App Store</div>
+                </div>
+              </a>
+              <!-- Google Play -->
+              <a href="https://play.google.com/store/apps/details?id=com.ay.sorulaquiztest" target="_blank"
+                class="flex items-center gap-3 bg-white text-gray-900 border-[1.5px] border-gray-200 px-6 py-3.5 rounded-2xl hover:border-gray-300 hover:bg-gray-50 transition-colors w-full sm:w-auto justify-center">
+                <svg class="w-6 h-6" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                  <path
+                    d="M3.609 1.814L13.792 12 3.61 22.186a.996.996 0 01-.61-.92V2.734a1 1 0 01.609-.92zm10.89 10.893l2.302 2.302-10.937 6.333 8.635-8.635zm3.199-3.199l2.302 2.302a1 1 0 010 1.38l-2.302 2.302L15.396 12l2.302-2.492zM5.864 2.658L16.8 8.99l-2.302 2.302L5.864 2.658z" />
+                </svg>
+                <div class="text-left">
+                  <div class="text-[10px] font-medium leading-tight opacity-60">İndir</div>
+                  <div class="text-base font-bold leading-tight">Google Play</div>
+                </div>
+              </a>
             </div>
-          </a>
-          <a href="https://play.google.com/store/apps/details?id=com.ay.sorulaquiztest" target="_blank"
-            class="group flex items-center gap-3 bg-white text-gray-900 border-2 border-gray-200 px-7 py-4 rounded-2xl hover:border-gray-300 hover:bg-gray-50 transition-all w-full sm:w-auto justify-center">
-            <svg class="w-6 h-6" viewBox="0 0 24 24" fill="currentColor">
-              <path
-                d="M3.609 1.814L13.792 12 3.61 22.186a.996.996 0 01-.61-.92V2.734a1 1 0 01.609-.92zm10.89 10.893l2.302 2.302-10.937 6.333 8.635-8.635zm3.199-3.199l2.302 2.302a1 1 0 010 1.38l-2.302 2.302L15.396 12l2.302-2.492zM5.864 2.658L16.8 8.99l-2.302 2.302L5.864 2.658z" />
-            </svg>
-            <div class="text-left">
-              <div class="text-[10px] font-medium leading-tight opacity-50">Şimdi İndir</div>
-              <div class="text-base font-bold leading-tight">Google Play</div>
-            </div>
-          </a>
-        </div>
+
       </div>
     </section>
 
@@ -1097,10 +599,8 @@
             sınırsız çıkmış sınav Premium ile açılır.</p>
         </div>
         <div class="bg-white rounded-2xl p-6 shadow-sm border border-gray-100">
-          <h3 class="text-lg font-bold text-gray-900 mb-2">Sorula'da yapay zeka nasıl çalışıyor?</h3>
-          <p class="text-gray-600 font-medium">Sorula'da 5 yapay zeka motoru birlikte çalışır: AI Soru Üretici,
-            Performans Analizi, Kamera ile Soru Analizi, PDF Analizi ve Adaptif Test Oluşturma. Bu motorlar öğrenme
-            kalıplarını analiz eder ve kişiselleştirilmiş çalışma önerileri sunar.</p>
+          <h3 class="text-lg font-bold text-gray-900 mb-2">Sorula'da yapay zeka ne işe yarıyor?</h3>
+          <p class="text-gray-600 font-medium">Sorunun fotoğrafını çektiğinde ya da Asistan'a yazdığında çözümü adım adım anlatır; çözdüğün testlere göre zayıf konularını gösterir ve istersen seçtiğin konuda yeni sorular üretir. Yapay zeka araçlarının çoğu Premium'a dahildir.</p>
         </div>
         <div class="bg-white rounded-2xl p-6 shadow-sm border border-gray-100">
           <h3 class="text-lg font-bold text-gray-900 mb-2">Sorula hangi platformlarda kullanılabilir?</h3>
@@ -1129,24 +629,20 @@
             <span class="text-xl font-bold tracking-tight text-gray-900">Sorula</span>
           </div>
           <p class="text-sm text-gray-400 max-w-sm leading-relaxed font-medium mb-6">
-            Yapay zeka destekli sınav hazırlık süper uygulaması. Tüm sınav hazırlığın tek akıllı platformda.
+            TYT, AYT, LGS, KPSS ve daha fazlası için çıkmış sorular, soru bankaları ve adım adım çözüm.
           </p>
-          <div class="flex items-center gap-2">
-            <span class="w-2 h-2 rounded-full bg-brand-500"></span>
-            <span class="text-xs text-gray-400 font-medium">İTÜ Çekirdek Hızlandırma Programı</span>
-          </div>
         </div>
 
         <!-- Bağlantılar -->
         <div>
           <h4 class="text-sm font-bold mb-4 text-gray-900">Ürün</h4>
           <ul class="space-y-3">
+            <li><a href="#cikmis-sorular"
+                class="text-sm text-gray-400 hover:text-gray-600 transition-colors font-medium">Çıkmış Sorular</a></li>
             <li><a href="#ozellikler"
                 class="text-sm text-gray-400 hover:text-gray-600 transition-colors font-medium">Özellikler</a></li>
             <li><a href="#yapay-zeka"
-                class="text-sm text-gray-400 hover:text-gray-600 transition-colors font-medium">Yapay Zeka</a></li>
-            <li><a href="#soru-bankasi"
-                class="text-sm text-gray-400 hover:text-gray-600 transition-colors font-medium">Soru Bankası</a></li>
+                class="text-sm text-gray-400 hover:text-gray-600 transition-colors font-medium">Kamera ile Çözüm</a></li>
           </ul>
         </div>
 
@@ -1311,6 +807,20 @@
 
   <!-- ========== SCRIPTS ========== -->
   <script>
+    // Kep atma: menüdeki sayfa açılınca, son bölümdeki göründüğünde bir kez; üstüne gelince / dokununca yeniden
+    document.querySelectorAll('[data-kep]').forEach((kep) => {
+      const at = () => { kep.classList.remove('oyna'); void kep.offsetWidth; kep.classList.add('oyna'); };
+      if (kep.hasAttribute('data-kep-gorunce')) {
+        const izle = new IntersectionObserver((g) => { if (g[0].isIntersecting) { at(); izle.disconnect(); } }, { threshold: 0.6 });
+        izle.observe(kep);
+      } else {
+        setTimeout(at, 400);
+      }
+      const hedef = kep.closest('a') || kep;
+      hedef.addEventListener('mouseenter', at);
+      hedef.addEventListener('touchstart', at, { passive: true });
+    });
+
     // Nav scroll efekti
     const navbar = document.getElementById('navbar');
     window.addEventListener('scroll', () => {

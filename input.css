@@ -138,3 +138,68 @@ details > summary { list-style: none; }
 details > summary::-webkit-details-marker { display: none; }
 details[open] > summary span:last-child { transform: rotate(45deg); }
 .katex { font-size: 1.05em; }
+
+/* ===== Ana sayfa (2026-11 yenileme): gerçek ekran görüntüleri + kep atma ===== */
+.tel {
+  position: relative;
+  border-radius: 46px;
+  padding: 9px;
+  background: #1b1b22;
+  box-shadow: 0 1px 0 1px #2c2c35 inset, 0 40px 80px -30px rgba(40, 30, 70, .35), 0 12px 30px -12px rgba(40, 30, 70, .2);
+}
+.tel img { display: block; width: 100%; height: auto; border-radius: 37px; }
+.tel-kucuk { border-radius: 34px; padding: 7px; }
+.tel-kucuk img { border-radius: 28px; }
+
+/* Hero: önde ana ekran, arkada karne */
+.ana-sahne { position: relative; width: 100%; max-width: 520px; height: 560px; margin: 0 auto; }
+.ana-sahne .tel { position: absolute; }
+.ana-sahne .on { left: 0; top: 0; width: 262px; z-index: 2; }
+.ana-sahne .arka { right: 0; top: 56px; width: 232px; }
+@media (min-width: 640px) {
+  .ana-sahne { height: 640px; }
+  .ana-sahne .on { left: 30px; width: 300px; }
+  .ana-sahne .arka { right: 0; top: 64px; width: 268px; }
+}
+@media (max-width: 400px) {
+  .ana-sahne { height: 500px; }
+  .ana-sahne .on { width: 228px; }
+  .ana-sahne .arka { width: 200px; }
+}
+
+.sinav-cip {
+  @apply text-[13px] font-bold text-gray-900 bg-white border-[1.5px] border-gray-200 rounded-[10px] px-3 py-1.5 transition-colors;
+}
+a.sinav-cip:hover { @apply border-brand-300 text-brand-700; }
+
+/* Kep atma — uygulamadaki acilis_animasyonu.dart ile aynı zaman çizelgesi (1850 ms).
+   Katmanlar: kep+püskül grubu altta, diploma üstte. */
+.kep-kutu { display: block; position: relative; aspect-ratio: 1; }
+.kep-kutu img { position: absolute; inset: 0; width: 100%; height: 100%; }
+.kep-kutu .kep-grup { position: absolute; inset: 0; transform-origin: 50% 45.9%; }
+.kep-kutu .kep-puskul { transform-origin: 32% 45.2%; }
+.kep-kutu.oyna .kep-grup { animation: kep-at 1.85s linear both; }
+.kep-kutu.oyna .kep-puskul { animation: kep-puskul 1.85s linear both; }
+@keyframes kep-at {
+  0%, 8.1% { transform: translateY(0) rotate(0); animation-timing-function: cubic-bezier(.33, 1, .68, 1); }
+  30.7% { transform: translateY(-18.55%) rotate(-14deg); animation-timing-function: cubic-bezier(.32, 0, .67, 0); }
+  47.4% { transform: translateY(0) rotate(0); animation-timing-function: ease-out; }
+  54.5% { transform: translateY(-2.15%) rotate(2deg); animation-timing-function: ease-in; }
+  61.6%, 100% { transform: translateY(0) rotate(0); }
+}
+@keyframes kep-puskul {
+  0%, 40.5% { transform: rotate(0); }
+  47.8% { transform: rotate(14deg); }
+  57.6% { transform: rotate(-10deg); }
+  67.3% { transform: rotate(6deg); }
+  77% { transform: rotate(-3deg); }
+  89.2%, 100% { transform: rotate(0); }
+}
+@media (prefers-reduced-motion: reduce) {
+  .kep-kutu .kep-grup, .kep-kutu .kep-puskul { animation: none !important; }
+}
+
+/* Özellik kartı: üstte gerçek ekran kesiti, altta metin (ikon yok) */
+.ozellik-kart { @apply bg-white border-[1.5px] border-gray-100 rounded-[22px] overflow-hidden; }
+.ozellik-ekran { @apply bg-brand-50 pt-6 px-8 h-[220px] overflow-hidden; }
+.ozellik-ekran img { @apply block w-full h-auto rounded-t-[18px]; box-shadow: 0 0 0 1px #ececf1, 0 10px 30px -12px rgba(60, 40, 100, .18); }
