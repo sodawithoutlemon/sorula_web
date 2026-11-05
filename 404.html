@@ -14,18 +14,27 @@
 </head>
 
 <body class="bg-white text-gray-900">
-    <main class="min-h-screen flex items-center justify-center px-6 py-16 bg-purple-glow">
+    <main class="min-h-screen flex items-center justify-center px-6 py-16">
         <div class="w-full max-w-md text-center">
-            <a href="/" aria-label="Sorula ana sayfa">
-                <img src="/logo.png" alt="Sorula" class="w-16 h-16 mx-auto mb-8" />
+            <a href="/" aria-label="Sorula ana sayfa" class="inline-block mb-6">
+                <span class="kep-kutu w-20 h-20" data-kep aria-hidden="true">
+                    <span class="kep-grup"><img src="/assets/ana/kep.png" alt="" /><img class="kep-puskul" src="/assets/ana/puskul.png" alt="" /></span>
+                    <img src="/assets/ana/diploma.png" alt="" />
+                </span>
             </a>
 
             <!-- Normal 404 görünümü -->
             <section id="bulunamadi">
-                <p class="text-6xl font-extrabold tracking-tight text-gradient-purple">404</p>
+                <p class="text-6xl font-extrabold tracking-tight text-brand-700">404</p>
                 <h1 class="mt-4 text-2xl font-bold tracking-tight">Sayfa Bulunamadı</h1>
                 <p class="mt-3 text-gray-500 leading-relaxed">Aradığınız sayfa mevcut değil veya taşınmış olabilir.
-                    Ana sayfaya dönerek tüm sınavlara tek platformdan ulaşabilirsiniz.</p>
+                    Çıkmış sorulara buradan devam edebilirsiniz.</p>
+                <div class="mt-6 flex flex-wrap justify-center gap-2">
+                    <a href="/tyt/cikmis-sorular/" class="sinav-cip">TYT</a>
+                    <a href="/ayt/cikmis-sorular/" class="sinav-cip">AYT</a>
+                    <a href="/lgs/cikmis-sorular/" class="sinav-cip">LGS</a>
+                    <a href="/kpss/cikmis-sorular/" class="sinav-cip">KPSS</a>
+                </div>
                 <a href="/"
                     class="mt-8 inline-flex items-center gap-2 rounded-full bg-gray-900 px-6 py-3 text-sm font-semibold text-white hover:bg-black transition-colors">
                     <svg width="16" height="16" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
@@ -95,6 +104,15 @@
     </footer>
 
     <script>
+        // Kep atma (ana sayfadaki ile aynı): açılışta bir kez, üstüne gelince / dokununca yeniden
+        (function () {
+            var kep = document.querySelector('[data-kep]');
+            function at() { kep.classList.remove('oyna'); void kep.offsetWidth; kep.classList.add('oyna'); }
+            setTimeout(at, 300);
+            kep.parentNode.addEventListener('mouseenter', at);
+            kep.parentNode.addEventListener('touchstart', at, { passive: true });
+        })();
+
         (function () {
             var yol = location.pathname;
             if (yol.indexOf('/invite/') !== 0) return;
