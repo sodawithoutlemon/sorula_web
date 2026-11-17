@@ -1,0 +1,69 @@
+# Sorula
+
+> Sorula; TYT, AYT, LGS ve KPSS'ye hazırlanan öğrenciler için bir mobil uygulamadır (iOS ve Android). Çıkmış sınavları gerçek süreyle deneme olarak çözdürür, her soruya adım adım çözüm verir, net ve puanı hesaplar. Bu site uygulamanın tanıtımı ve ücretsiz çıkmış soru, puan hesaplama ve konu dağılımı sayfalarıdır.
+
+Notlar:
+- Sitedeki ve uygulamadaki çıkmış sorular ÖSYM ve MEB sorularının Sorula tarafından yeniden yazılmış eşdeğerleridir; orijinal metin için her sayfada resmî kitapçık bağlantısı vardır. Toplam 4.028 soru.
+- Puan ve sıralama hesapları tahminidir; resmî sonuçları ÖSYM ve MEB açıklar.
+- Konu etiketleri Sorula'nındır, resmî konu listesi değildir.
+- Sorula; ÖSYM, MEB veya YÖK ile bağlantılı değildir.
+- Uygulama: App Store https://apps.apple.com/tr/app/id6740641580 · Google Play https://play.google.com/store/apps/details?id=com.ay.sorulaquiztest
+
+## TYT
+
+- [TYT sayfası](https://sorula.app/tyt/): Sorula'da TYT hazırlığı
+- [TYT çıkmış sorular 2018–2026](https://sorula.app/tyt/cikmis-sorular/): yıl yıl ve ders ders konu dağılımı, Sorula'nın yeniden yazdığı çözümlü örnek sorular, ÖSYM resmî kitapçık bağlantısı
+- [TYT puan hesaplama](https://sorula.app/tyt/puan-hesaplama/): netten tahmini puan, yerleştirme puanı ve sıralama; uygulamadaki hesaplayıcıyla aynı, sonuç tahminidir
+- [TYT konu dağılımı](https://sorula.app/tyt/konu-dagilimi/): hangi konudan hangi yıl kaç soru çıktı
+
+## AYT
+
+- [AYT sayfası](https://sorula.app/ayt/): Sorula'da AYT hazırlığı
+- [AYT çıkmış sorular 2018–2026](https://sorula.app/ayt/cikmis-sorular/): yıl yıl ve ders ders konu dağılımı, Sorula'nın yeniden yazdığı çözümlü örnek sorular, ÖSYM resmî kitapçık bağlantısı
+- [AYT puan hesaplama](https://sorula.app/ayt/puan-hesaplama/): netten tahmini puan, yerleştirme puanı ve sıralama; uygulamadaki hesaplayıcıyla aynı, sonuç tahminidir
+- [AYT konu dağılımı](https://sorula.app/ayt/konu-dagilimi/): hangi konudan hangi yıl kaç soru çıktı
+
+## LGS
+
+- [LGS sayfası](https://sorula.app/lgs/): Sorula'da LGS hazırlığı
+- [LGS çıkmış sorular 2018–2026](https://sorula.app/lgs/cikmis-sorular/): yıl yıl ve ders ders konu dağılımı, Sorula'nın yeniden yazdığı çözümlü örnek sorular, MEB resmî kitapçık bağlantısı
+- [LGS puan hesaplama](https://sorula.app/lgs/puan-hesaplama/): netten tahmini puan ve yüzdelik dilim; uygulamadaki hesaplayıcıyla aynı, sonuç tahminidir
+- [LGS konu dağılımı](https://sorula.app/lgs/konu-dagilimi/): hangi konudan hangi yıl kaç soru çıktı
+- [LGS'ye kaç gün kaldı](https://sorula.app/lgs/kac-gun-kaldi/): resmî takvimden sınav tarihi ve geri sayım
+
+## KPSS
+
+- [KPSS sayfası](https://sorula.app/kpss/): Sorula'da KPSS hazırlığı
+- [KPSS çıkmış sorular 2020–2026](https://sorula.app/kpss/cikmis-sorular/): yıl yıl ve ders ders konu dağılımı, Sorula'nın yeniden yazdığı çözümlü örnek sorular, ÖSYM resmî kitapçık bağlantısı
+- [KPSS puan hesaplama](https://sorula.app/kpss/puan-hesaplama/): netten tahmini puan (P3); uygulamadaki hesaplayıcıyla aynı, sonuç tahminidir
+- [KPSS konu dağılımı](https://sorula.app/kpss/konu-dagilimi/): hangi konudan hangi yıl kaç soru çıktı
+
+## Blog
+
+- [Blog dizini](https://sorula.app/blog/)
+- [2025 YKS Konuları Neler? Detaylı Güncel Liste](https://sorula.app/blog/2025-yks-konulari-neler.html)
+- [ALES Sözel Mantık Soruları Nasıl Çözülür?](https://sorula.app/blog/ales-sozel-mantik-sorulari-nasil-cozulur.html)
+- [AYT Fen Bilimleri Çalışma Rehberi: Fizik, Kimya, Biyoloji Stratejileri](https://sorula.app/blog/ayt-fen-bilimleri-calisma-rehberi.html)
+- [AYT Taktikleri ve Zaman Yönetimi: Netlerinizi Nasıl Artırırsınız?](https://sorula.app/blog/ayt-taktikleri-ve-zaman-yonetimi.html)
+- [DGS Matematik Nasıl Çalışılır? Hız ve Mantık Stratejileri](https://sorula.app/blog/dgs-matematik-nasil-calisilir.html)
+- [Etkili Not Alma Teknikleri: Cornell, Zihin Haritası ve Feynman Yöntemi](https://sorula.app/blog/etkili-not-alma-teknikleri.html)
+- [Evde KPSS Nasıl Çalışılır?](https://sorula.app/blog/evde-kpss-nasil-calisilir.html)
+- [KPSS Genel Yetenek - Genel Kültür: Nasıl Çalışılır?](https://sorula.app/blog/kpss-gy-gk-sinavina-nasil-calisilir.html)
+- [LGS Deneme Sınavları Ne Zaman Çözülmeye Başlanmalı?](https://sorula.app/blog/lgs-deneme-sinavlari-ne-zaman.html)
+- [LGS İçin Son Ay: Puanları Nasıl Artırırsınız?](https://sorula.app/blog/lgs-son-ay-taktikleri.html)
+- [Sınav Günü Yapılması ve Yapılmaması Gerekenler: Altın Kurallar](https://sorula.app/blog/sinav-gunu-yapilmasi-gerekenler.html)
+- [Sınav Motivasyonunu Korumak: Pomodoro Tekniği](https://sorula.app/blog/sinav-motivasyonu-pomodoro.html)
+- [TYT Matematik Yeni Nesil Soru Çözüm Taktikleri](https://sorula.app/blog/tyt-matematik-yeni-nesil-soru-cozum-taktikleri.html)
+- [TYT'ye Nasıl Hazırlanılır? Tüm Dersler İçin Detaylı Rehber](https://sorula.app/blog/tyt-ye-nasil-hazirlanilir.html)
+- [Yapay Zeka ile Sınav Hazırlığı: Eğitimde Yeni Dönem](https://sorula.app/blog/yapay-zeka-ile-sinav-hazirligi.html)
+- [YDT (Yabancı Dil Testi) İngilizce Çalışma Taktikleri](https://sorula.app/blog/ydt-ingilizce-calisma-taktikleri.html)
+- [YKS 2025: Evde Kendi Çalışma Programınızı Nasıl Hazırlarsınız?](https://sorula.app/blog/yks-calisma-programi-hazirlama.html)
+- [YKS Sınav Stresi ve Motivasyon: Kaygıyı Başarıya Dönüştürün](https://sorula.app/blog/yks-stres-yonetimi-ve-motivasyon.html)
+
+## Optional
+
+- [Ana sayfa](https://sorula.app/)
+- [Destek](https://sorula.app/destek/)
+- [Gizlilik politikası](https://sorula.app/privacy/)
+- [Kullanım şartları](https://sorula.app/terms/)
+- [KVKK aydınlatma metni](https://sorula.app/kvkk/)
