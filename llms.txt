@@ -15,6 +15,7 @@ Notlar:
 - [TYT çıkmış sorular 2018–2026](https://sorula.app/tyt/cikmis-sorular/): yıl yıl ve ders ders konu dağılımı, Sorula'nın yeniden yazdığı çözümlü örnek sorular, ÖSYM resmî kitapçık bağlantısı
 - [TYT puan hesaplama](https://sorula.app/tyt/puan-hesaplama/): netten tahmini puan, yerleştirme puanı ve sıralama; uygulamadaki hesaplayıcıyla aynı, sonuç tahminidir
 - [TYT konu dağılımı](https://sorula.app/tyt/konu-dagilimi/): hangi konudan hangi yıl kaç soru çıktı
+- [TYT'ye kaç gün kaldı](https://sorula.app/tyt/kac-gun-kaldi/): resmî takvimden sınav tarihi ve geri sayım
 
 ## AYT
 
@@ -22,6 +23,7 @@ Notlar:
 - [AYT çıkmış sorular 2018–2026](https://sorula.app/ayt/cikmis-sorular/): yıl yıl ve ders ders konu dağılımı, Sorula'nın yeniden yazdığı çözümlü örnek sorular, ÖSYM resmî kitapçık bağlantısı
 - [AYT puan hesaplama](https://sorula.app/ayt/puan-hesaplama/): netten tahmini puan, yerleştirme puanı ve sıralama; uygulamadaki hesaplayıcıyla aynı, sonuç tahminidir
 - [AYT konu dağılımı](https://sorula.app/ayt/konu-dagilimi/): hangi konudan hangi yıl kaç soru çıktı
+- [AYT'ye kaç gün kaldı](https://sorula.app/ayt/kac-gun-kaldi/): resmî takvimden sınav tarihi ve geri sayım
 
 ## LGS
 
@@ -37,6 +39,7 @@ Notlar:
 - [KPSS çıkmış sorular 2020–2026](https://sorula.app/kpss/cikmis-sorular/): yıl yıl ve ders ders konu dağılımı, Sorula'nın yeniden yazdığı çözümlü örnek sorular, ÖSYM resmî kitapçık bağlantısı
 - [KPSS puan hesaplama](https://sorula.app/kpss/puan-hesaplama/): netten tahmini puan (P3); uygulamadaki hesaplayıcıyla aynı, sonuç tahminidir
 - [KPSS konu dağılımı](https://sorula.app/kpss/konu-dagilimi/): hangi konudan hangi yıl kaç soru çıktı
+- [KPSS'ye kaç gün kaldı](https://sorula.app/kpss/kac-gun-kaldi/): resmî takvimden sınav tarihi ve geri sayım
 
 ## Blog
 
